@@ -9,13 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "lucide-react": "latest",
     "react": "latest",
-    "react-dom": "latest",
-    "lucide-react": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
     "@types/node": "latest",
     "@vitejs/plugin-react": "latest",
+    "gh-pages": "^6.3.0",
     "typescript": "latest",
     "vite": "latest"
   }
