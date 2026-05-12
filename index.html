@@ -1,0 +1,1870 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Guru Padukam – 100% Organic Pooja Materials. Pasupu, Kumkum, Gandham, Vibhuti & Yagnopavitam. Traditional Vedic preparation. Trusted by temples & purohits across India."/>
+  <meta name="theme-color" content="#380311"/>
+  <title>గురు పాదుకం – Organic Pooja Materials | Hyderabad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Noto+Serif+Telugu:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+
+  <style>
+    /* ===== DESIGN TOKENS ===== */
+    :root{
+      --maroon:#5C0A20;--maroon-dk:#380311;--maroon-md:#7D1A30;
+      --gold:#C9943A;--gold-lt:#E8C27A;--gold-pale:#F5DFA0;
+      --cream:#FDF6E3;--ivory:#FAF0D0;--brown:#6B3A1F;
+      --text-dk:#2A1208;--text-md:#5A3020;
+      --sg:rgba(201,148,58,.35);--sd:rgba(56,3,17,.5);
+      --green:#2d6a1f;--green-lt:#e8f5e0;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+    body{font-family:'EB Garamond',Georgia,serif;background:var(--cream);color:var(--text-dk);overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    button,input,select,textarea{font-family:inherit}
+    input[type=number]{-moz-appearance:textfield}
+    input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}
+
+    /* ===== PRE-LAUNCH PAGE ===== */
+    #prelaunch{
+      display:none;position:fixed;inset:0;z-index:99999;
+      background:#05020A;
+      overflow:hidden;
+    }
+    #pl-overlay{
+      position:absolute;inset:0;
+      background:radial-gradient(ellipse 70% 60% at 50% 60%,rgba(201,148,58,.12) 0%,transparent 65%);
+      pointer-events:none;
+    }
+    .pl-mandala{
+      position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+      pointer-events:none;opacity:.07;
+    }
+    .pl-mandala svg{width:min(700px,90vw);height:min(700px,90vw);animation:plrot 60s linear infinite}
+    @keyframes plrot{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+    .pl-sparks{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+    .spark{
+      position:absolute;width:3px;height:3px;border-radius:50%;
+      background:var(--gold);
+      animation:sparkrise 1.2s ease-out forwards;
+    }
+    @keyframes sparkrise{
+      0%{opacity:1;transform:translate(0,0) scale(1)}
+      100%{opacity:0;transform:translate(var(--sx,0px),var(--sy,-60px)) scale(0)}
+    }
+    #pl-inner{
+      position:relative;z-index:2;
+      min-height:100vh;display:flex;flex-direction:column;
+      align-items:center;justify-content:center;
+      padding:2rem 1.5rem;text-align:center;
+    }
+    .pl-eyebrow{
+      font-family:'Cinzel',serif;font-size:clamp(.58rem,1.2vw,.78rem);
+      letter-spacing:.38em;text-transform:uppercase;
+      color:var(--gold);margin-bottom:1.5rem;
+      animation:fadeUp .8s .2s both;
+    }
+    .pl-diya-wrap{
+      position:relative;width:clamp(160px,26vw,220px);height:clamp(160px,26vw,220px);
+      border-radius:50%;cursor:pointer;margin-bottom:2rem;
+      animation:fadeUp .9s .4s both;
+    }
+    .pl-diya-ring{
+      position:absolute;inset:0;border-radius:50%;
+      border:2px solid rgba(201,148,58,.25);
+      transition:border-color .7s,box-shadow .7s;
+    }
+    .pl-diya-wrap.lit .pl-diya-ring{
+      border-color:var(--gold);
+      box-shadow:0 0 60px rgba(201,148,58,.5),0 0 120px rgba(201,148,58,.25);
+    }
+    .pl-diya-img{
+      width:100%;height:100%;object-fit:cover;border-radius:50%;
+      filter:brightness(.45) grayscale(40%);transition:filter 1s;
+    }
+    .pl-diya-wrap.lit .pl-diya-img{filter:brightness(1.15) saturate(1.2)}
+    .pl-diya-flame{
+      position:absolute;inset:0;border-radius:50%;
+      background:radial-gradient(circle at 50% 40%,rgba(255,160,40,.3) 0%,transparent 60%);
+      opacity:0;transition:opacity 1s;
+    }
+    .pl-diya-wrap.lit .pl-diya-flame{opacity:1;animation:flicker 2s ease-in-out infinite alternate}
+    @keyframes flicker{from{opacity:.8}to{opacity:1}}
+    .pl-tap-hint{
+      position:absolute;inset:0;border-radius:50%;
+      display:flex;align-items:center;justify-content:center;
+      background:rgba(0,0,0,.42);
+      transition:opacity .5s;
+    }
+    .pl-tap-hint span{
+      font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.18em;
+      text-transform:uppercase;color:var(--gold-pale);
+      border:1px solid rgba(201,148,58,.4);padding:.4rem .9rem;
+      background:rgba(0,0,0,.4);
+    }
+    .pl-diya-wrap.lit .pl-tap-hint{opacity:0;pointer-events:none}
+    .pl-title{
+      font-family:'Cinzel Decorative',cursive;
+      font-size:clamp(2rem,6vw,4.2rem);font-weight:700;
+      color:var(--cream);line-height:1.1;
+      text-shadow:0 4px 32px rgba(201,148,58,.3);
+      margin-bottom:.4rem;
+      animation:fadeUp .9s .6s both;
+    }
+    .pl-title.lit-glow{color:var(--gold-lt);text-shadow:0 0 40px rgba(201,148,58,.4)}
+    .pl-subtitle{
+      font-family:'Noto Serif Telugu',serif;
+      font-size:clamp(.9rem,2.2vw,1.35rem);
+      color:var(--gold-pale);margin-bottom:.6rem;
+      animation:fadeUp .8s .7s both;
+    }
+    .pl-tagline{
+      font-family:'EB Garamond',serif;font-style:italic;
+      font-size:clamp(.95rem,1.8vw,1.18rem);
+      color:rgba(245,223,160,.6);margin-bottom:2.5rem;
+      animation:fadeUp .8s .8s both;
+    }
+    /* Countdown */
+    .pl-countdown{
+      display:flex;gap:1rem;align-items:center;
+      background:rgba(0,0,0,.4);
+      border:1px solid rgba(201,148,58,.2);
+      padding:1.5rem 2.5rem;
+      margin-bottom:2.5rem;
+      backdrop-filter:blur(12px);
+      animation:fadeUp .9s 1s both;
+    }
+    .pl-unit{text-align:center;min-width:70px}
+    .pl-num{
+      font-family:'Cinzel',serif;font-size:clamp(2.2rem,5vw,3.5rem);
+      font-weight:700;color:var(--gold-lt);line-height:1;display:block;
+      text-shadow:0 0 20px rgba(201,148,58,.4);
+    }
+    .pl-lbl{
+      font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.22em;
+      text-transform:uppercase;color:rgba(245,223,160,.5);display:block;margin-top:.4rem;
+    }
+    .pl-colon{font-family:'Cinzel',serif;font-size:2.5rem;color:rgba(201,148,58,.4);margin-top:-.4rem}
+    .pl-diyas-lit{
+      font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.1em;
+      color:rgba(245,223,160,.55);margin-bottom:1.5rem;
+      animation:fadeUp .8s 1.1s both;
+    }
+    .pl-diyas-lit span{color:var(--gold);font-size:1.1rem}
+    .pl-actions{
+      display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;
+      animation:fadeUp .8s 1.2s both;
+    }
+    .btn-pl-wa{
+      font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.16em;
+      text-transform:uppercase;padding:.78rem 1.8rem;
+      background:#25D366;color:#fff;border:none;cursor:pointer;
+      display:flex;align-items:center;gap:.5rem;
+      transition:transform .2s,box-shadow .2s;
+    }
+    .btn-pl-wa:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(37,211,102,.4)}
+    .btn-pl-enter{
+      font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.16em;
+      text-transform:uppercase;padding:.76rem 1.8rem;
+      background:transparent;color:var(--gold-pale);
+      border:1px solid rgba(201,148,58,.35);cursor:pointer;
+      transition:background .3s,border-color .3s;
+    }
+    .btn-pl-enter:hover{background:rgba(201,148,58,.1);border-color:var(--gold)}
+    .pl-launch-date{
+      position:absolute;bottom:1.8rem;left:50%;transform:translateX(-50%);
+      font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.2em;
+      text-transform:uppercase;color:rgba(201,148,58,.35);
+      white-space:nowrap;
+    }
+    @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+    /* ===== MAIN SITE ===== */
+    #mainsite{display:none}
+
+    /* ANN BAR */
+    .ann{background:var(--maroon-dk);overflow:hidden;padding:.42rem 0}
+    .ann-track{display:flex;animation:tick 28s linear infinite;white-space:nowrap;width:max-content}
+    .ann-track span{font-family:'Cinzel',serif;font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-lt);padding:0 2.5rem}
+    .ann-track span::before{content:'✦ ';color:var(--gold)}
+    @keyframes tick{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:900;background:rgba(253,246,227,.97);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,148,58,.22);box-shadow:0 2px 20px var(--sd)}
+    .nav-inner{max-width:1300px;margin:0 auto;padding:0 2rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:.75rem;cursor:pointer}
+    .logo-img{width:50px;height:50px;border-radius:50%;object-fit:contain;border:2px solid rgba(201,148,58,.4);background:#fff}
+    .logo-en{font-family:'Cinzel Decorative',cursive;font-size:1.05rem;font-weight:700;color:var(--maroon)}
+    .logo-te{font-family:'Noto Serif Telugu',serif;font-size:.7rem;color:var(--gold)}
+    .nav-links{list-style:none;display:flex;gap:2rem}
+    .nav-links a{font-family:'Cinzel',serif;font-size:.71rem;letter-spacing:.13em;text-transform:uppercase;color:var(--text-dk);position:relative;transition:color .3s;cursor:pointer}
+    .nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--gold);transition:width .3s}
+    .nav-links a:hover{color:var(--maroon)}.nav-links a:hover::after{width:100%}
+    .nav-r{display:flex;gap:.8rem;align-items:center}
+    .ni{background:none;border:none;cursor:pointer;font-size:1.1rem;color:var(--maroon);position:relative;transition:color .3s,transform .2s}
+    .ni:hover{color:var(--gold);transform:scale(1.15)}
+    .cb{position:absolute;top:-5px;right:-7px;background:var(--maroon);color:var(--gold-pale);font-family:'Cinzel',serif;font-size:.52rem;width:15px;height:15px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .btn-book{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;padding:.5rem 1.4rem;background:var(--maroon);color:var(--gold-pale);border:none;cursor:pointer;clip-path:polygon(6px 0%,100% 0%,calc(100% - 6px) 100%,0%100%);transition:background .3s,transform .2s}
+    .btn-book:hover{background:var(--maroon-md);transform:translateY(-1px)}
+    .ham{display:none;background:none;border:none;cursor:pointer;font-size:1.4rem;color:var(--maroon)}
+
+    /* HERO */
+    .hero{position:relative;width:100%;height:clamp(500px,88vh,820px);overflow:hidden;background:var(--maroon-dk)}
+    .slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;display:flex;align-items:center}
+    .slide.active{opacity:1}
+    .slide-bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.07);transition:transform 8s ease}
+    .slide.active .slide-bg{transform:scale(1)}
+    .s1 .slide-bg{background-image:linear-gradient(135deg,#380311 0%,#5C0A20 45%,#7D1A30 100%),url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1400,h=900,fit=crop/tNrOkFJHrQGKzMyG/chatgpt-image-mar-24-2026-10_27_29-pm-uy3PQQ9sZQ3cAUb8.png');background-blend-mode:multiply}
+    .s2 .slide-bg{background-image:linear-gradient(140deg,rgba(56,3,17,.7) 0%,rgba(92,10,32,.5) 50%,transparent 100%),url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1400,h=900,fit=crop/tNrOkFJHrQGKzMyG/chatgpt-image-mar-21-2026-12_12_33-pm-hxiX10mZJPlTS4KF.png');background-blend-mode:multiply}
+    .s3 .slide-bg{background-image:linear-gradient(135deg,rgba(56,3,17,.75) 0%,rgba(92,10,32,.55) 60%,transparent 100%),url('https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1400,h=900,fit=crop/tNrOkFJHrQGKzMyG/gemini_generated_image_az55qzaz55qzaz55-1-qoE2sOBnb4lPbbYH.png');background-blend-mode:multiply}
+    .slide-ov{position:absolute;inset:0;background:linear-gradient(100deg,rgba(20,3,8,.8) 0%,rgba(20,3,8,.4) 55%,rgba(20,3,8,.1) 100%)}
+    .slide-body{position:relative;z-index:2;max-width:1300px;margin:0 auto;padding:0 5vw;width:100%}
+    .sk{font-family:'Cinzel',serif;font-size:clamp(.62rem,1.1vw,.8rem);letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:.85rem;opacity:0;transform:translateY(16px);transition:opacity .6s .25s,transform .6s .25s}
+    .slide.active .sk{opacity:1;transform:translateY(0)}
+    .sh{font-family:'Cinzel Decorative',cursive;font-size:clamp(1.9rem,5vw,4.5rem);font-weight:700;color:var(--cream);line-height:1.1;text-shadow:0 4px 28px rgba(0,0,0,.5);max-width:680px;opacity:0;transform:translateY(26px);transition:opacity .7s .45s,transform .7s .45s}
+    .slide.active .sh{opacity:1;transform:translateY(0)}
+    .ste{font-family:'Noto Serif Telugu',serif;font-size:clamp(.95rem,2.2vw,1.45rem);color:var(--gold-pale);margin-top:.45rem;opacity:0;transform:translateY(16px);transition:opacity .6s .65s,transform .6s .65s}
+    .slide.active .ste{opacity:1;transform:translateY(0)}
+    .sd_{font-family:'EB Garamond',serif;font-style:italic;font-size:clamp(.95rem,1.7vw,1.22rem);color:rgba(245,223,160,.85);max-width:500px;margin-top:.8rem;line-height:1.75;opacity:0;transform:translateY(16px);transition:opacity .6s .85s,transform .6s .85s}
+    .slide.active .sd_{opacity:1;transform:translateY(0)}
+    .sbtns{display:flex;gap:1rem;margin-top:1.8rem;flex-wrap:wrap;opacity:0;transform:translateY(16px);transition:opacity .6s 1.05s,transform .6s 1.05s}
+    .slide.active .sbtns{opacity:1;transform:translateY(0)}
+    .hero-ctrl{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:.55rem;align-items:center}
+    .dot{width:8px;height:8px;border-radius:50%;background:rgba(232,194,122,.28);border:1px solid rgba(201,148,58,.38);cursor:pointer;transition:background .3s,transform .3s}
+    .dot.active{background:var(--gold);transform:scale(1.45)}
+    .arr{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:42px;height:42px;background:rgba(253,246,227,.1);border:1px solid rgba(201,148,58,.32);color:var(--gold-lt);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;clip-path:polygon(7px 0%,100% 0%,calc(100% - 7px) 100%,0%100%);transition:background .3s}
+    .arr:hover{background:rgba(201,148,58,.2)}
+    #pa{left:1.2rem}#na{right:1.2rem}
+    .mandala{position:absolute;right:4%;top:50%;transform:translateY(-50%);width:min(360px,40vw);height:min(360px,40vw);opacity:.065;pointer-events:none;z-index:1}
+
+    /* BUTTONS */
+    .btn-g{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:.82rem 2.1rem;border:none;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-lt) 50%,var(--gold));background-size:200%;color:var(--maroon-dk);clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0%100%);box-shadow:0 4px 22px var(--sg);transition:background-position .4s,transform .2s,box-shadow .3s}
+    .btn-g:hover{background-position:100%;transform:translateY(-2px);box-shadow:0 8px 30px var(--sg)}
+    .btn-gh{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;padding:.8rem 2.1rem;border:1px solid rgba(232,194,122,.48);background:transparent;color:var(--cream);cursor:pointer;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0%100%);transition:background .3s,color .3s,transform .2s}
+    .btn-gh:hover{background:rgba(232,194,122,.12);color:var(--gold-lt);transform:translateY(-2px)}
+
+    /* TRUST */
+    .trust{background:var(--maroon);padding:1rem 2rem;display:flex;justify-content:center;gap:clamp(1.2rem,4vw,4rem);flex-wrap:wrap}
+    .ti{display:flex;align-items:center;gap:.6rem}
+    .tic{font-size:1.15rem;color:var(--gold)}
+    .til{font-family:'Cinzel',serif;font-size:.64rem;letter-spacing:.13em;text-transform:uppercase;color:var(--gold-lt)}
+    .tis{font-size:.74rem;color:rgba(253,246,227,.62)}
+
+    /* SECTION HEADER */
+    .sh-wrap{text-align:center;margin-bottom:2.8rem}
+    .sk2{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);margin-bottom:.55rem}
+    .st{font-family:'Cinzel',serif;font-size:clamp(1.55rem,2.8vw,2.3rem);font-weight:600;color:var(--maroon);letter-spacing:.1em;text-transform:uppercase}
+    .ste2{font-family:'Noto Serif Telugu',serif;font-size:1rem;color:var(--brown);margin-top:.3rem}
+    .orn{display:flex;align-items:center;gap:.8rem;justify-content:center;margin:.7rem 0}
+    .orn::before,.orn::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+    .orn span{color:var(--gold);font-size:1.15rem}
+
+    /* LAUNCH BANNER */
+    .launch-sec{padding:5rem 2rem;background:var(--ivory);position:relative;overflow:hidden}
+    .launch-sec::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 80% 50% at 50% 100%,rgba(201,148,58,.07) 0%,transparent 70%)}
+    .li{max-width:1300px;margin:0 auto}
+    .lb{border:1px solid rgba(201,148,58,.32);background:linear-gradient(135deg,var(--maroon-dk) 0%,var(--maroon) 55%,var(--maroon-md) 100%);display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;padding:clamp(2rem,5vw,4rem);position:relative;overflow:hidden;box-shadow:0 12px 48px var(--sd)}
+    .lb::after{content:'ॐ';position:absolute;right:2rem;bottom:-1rem;font-size:9rem;color:rgba(201,148,58,.05);line-height:1;pointer-events:none;font-family:serif}
+    .ltag{display:inline-flex;align-items:center;gap:.4rem;background:var(--gold);color:var(--maroon-dk);font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;padding:.26rem .85rem;margin-bottom:1rem}
+    .lh{font-family:'Cinzel Decorative',cursive;font-size:clamp(1.45rem,3.5vw,2.7rem);color:var(--cream);line-height:1.15}
+    .lte{font-family:'Noto Serif Telugu',serif;font-size:1.05rem;color:var(--gold-pale);margin-top:.35rem}
+    .ldesc{font-family:'EB Garamond',serif;font-style:italic;font-size:1.02rem;color:rgba(253,246,227,.72);max-width:460px;margin-top:.7rem;line-height:1.7}
+    .lbtns{margin-top:1.7rem;display:flex;gap:.9rem;flex-wrap:wrap}
+    .cd{display:flex;gap:.85rem;flex-shrink:0}
+    .cu{text-align:center;min-width:68px;background:rgba(253,246,227,.07);border:1px solid rgba(201,148,58,.28);padding:.8rem .4rem}
+    .cn{font-family:'Cinzel',serif;font-size:1.9rem;font-weight:600;color:var(--gold-lt);line-height:1;display:block}
+    .cl{font-family:'Cinzel',serif;font-size:.48rem;letter-spacing:.17em;text-transform:uppercase;color:rgba(248,223,160,.5);display:block;margin-top:.3rem}
+
+    /* DIVINE SECTION */
+    .divine-sec{padding:5rem 2rem;background:var(--ivory);border-bottom:1px solid rgba(201,148,58,.2)}
+    .split-wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;max-width:1200px;margin:0 auto}
+    .vid-wrap{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:8px;box-shadow:0 12px 32px var(--sd);border:2px solid var(--gold)}
+    .vid-wrap video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+    .hl-box{background:var(--cream);border:1px solid rgba(201,148,58,.3);padding:2.5rem;border-radius:8px;box-shadow:0 12px 32px var(--sd)}
+    .hl-item{display:flex;gap:1rem;margin-bottom:1.5rem;align-items:flex-start}
+    .hl-ico{font-size:1.8rem;line-height:1;flex-shrink:0}
+    .hl-text h4{font-family:'Cinzel',serif;color:var(--maroon);margin-bottom:.3rem;font-size:1rem;font-weight:600}
+    .hl-text p{font-size:.92rem;color:var(--text-md);line-height:1.55}
+
+    /* PRODUCT GRID */
+    .prod-sec{padding:5rem 2rem;background:var(--cream)}
+    .pi{max-width:1300px;margin:0 auto}
+    .ftabs{display:flex;gap:.45rem;justify-content:center;flex-wrap:wrap;margin-top:1.4rem}
+    .ft{font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;padding:.42rem 1.1rem;cursor:pointer;border:1px solid rgba(201,148,58,.28);background:transparent;color:var(--text-md);clip-path:polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0%100%);transition:all .3s}
+    .ft:hover,.ft.active{background:var(--maroon);color:var(--gold-pale);border-color:var(--maroon)}
+    .pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:1.7rem;margin-top:2.8rem}
+    .pc{background:#fff;border:1px solid rgba(201,148,58,.14);position:relative;overflow:hidden;transition:transform .3s,box-shadow .3s;cursor:pointer}
+    .pc:hover{transform:translateY(-7px);box-shadow:0 18px 52px rgba(92,10,32,.18)}
+    .pc:hover .pa{opacity:1;transform:translateY(0)}
+    .pc:hover .pimg img{transform:scale(1.08)}
+    .pbadge{position:absolute;top:.85rem;left:.85rem;z-index:3;font-family:'Cinzel',serif;font-size:.56rem;letter-spacing:.13em;text-transform:uppercase;padding:.2rem .62rem}
+    .borg{background:var(--green);color:var(--green-lt)}
+    .bnew{background:var(--maroon);color:var(--gold-pale)}
+    .bsale{background:var(--gold);color:var(--maroon-dk)}
+    .blim{background:var(--brown);color:var(--cream)}
+    .pimg{width:100%;aspect-ratio:1;overflow:hidden;background:linear-gradient(160deg,#f5e8d0,#e8d5b0)}
+    .pimg img{width:100%;height:100%;object-fit:cover;transition:transform .55s ease}
+    .pa{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(92,10,32,.92) 0%,transparent 100%);padding:1.3rem .85rem .85rem;display:flex;gap:.45rem;opacity:0;transform:translateY(8px);transition:opacity .3s,transform .3s;z-index:2}
+    .qvb,.acb{flex:1;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;padding:.5rem .35rem;cursor:pointer;border:none;transition:all .2s}
+    .qvb{background:transparent;color:var(--gold-pale);border:1px solid rgba(232,194,122,.42)}
+    .qvb:hover{background:rgba(232,194,122,.14)}
+    .acb{background:var(--gold);color:var(--maroon-dk)}
+    .acb:hover{background:var(--gold-lt)}
+    .pinfo{padding:1.05rem 1.1rem 1.35rem}
+    .pn{font-family:'Cinzel',serif;font-size:.86rem;font-weight:600;letter-spacing:.04em;color:var(--maroon)}
+    .pnte{font-family:'Noto Serif Telugu',serif;font-size:.8rem;color:var(--brown);margin-top:.12rem}
+    .ptag{font-size:.76rem;color:var(--brown);font-style:italic;margin:.38rem 0 .65rem}
+    .ppr{display:flex;align-items:baseline;gap:.52rem}
+    .pprice{font-family:'Cinzel',serif;font-size:.96rem;font-weight:600;color:var(--maroon)}
+    .porig{font-size:.76rem;color:#aaa;text-decoration:line-through}
+    .poff{font-family:'Cinzel',serif;font-size:.66rem;color:var(--gold)}
+    .pstars{display:flex;gap:2px;margin-top:.45rem}
+    .pstars span{color:var(--gold);font-size:.7rem}
+    .porg{display:inline-flex;align-items:center;gap:.28rem;margin-top:.5rem;font-family:'Cinzel',serif;font-size:.56rem;letter-spacing:.11em;text-transform:uppercase;color:var(--green);background:var(--green-lt);padding:.16rem .48rem}
+
+    /* WHY */
+    .why-sec{padding:5rem 2rem;background:var(--maroon-dk);position:relative;overflow:hidden}
+    .why-sec::before{content:'';position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 65% 80% at 80% 50%,rgba(201,148,58,.07) 0%,transparent 60%)}
+    .wi{max-width:1300px;margin:0 auto}
+    .wgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(195px,1fr));gap:1.4rem;margin-top:2.8rem}
+    .wc{border:1px solid rgba(201,148,58,.18);padding:1.7rem 1.3rem;background:rgba(253,246,227,.04);text-align:center;transition:background .3s,border-color .3s,transform .3s}
+    .wc:hover{background:rgba(201,148,58,.07);border-color:rgba(201,148,58,.38);transform:translateY(-4px)}
+    .wico{font-size:2rem;margin-bottom:.8rem}
+    .wtit{font-family:'Cinzel',serif;font-size:.75rem;letter-spacing:.11em;text-transform:uppercase;color:var(--gold-lt);margin-bottom:.45rem}
+    .wdesc{font-size:.86rem;color:rgba(253,246,227,.58);line-height:1.62}
+
+    /* TESTIMONIALS */
+    .tsti-sec{padding:5rem 2rem;background:var(--ivory)}
+    .tsti-i{max-width:1300px;margin:0 auto}
+    .tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:1.4rem;margin-top:2.8rem}
+    .tc{background:#fff;padding:1.7rem;border:1px solid rgba(201,148,58,.13);position:relative;transition:transform .3s,box-shadow .3s}
+    .tc:hover{transform:translateY(-4px);box-shadow:0 10px 32px rgba(92,10,32,.1)}
+    .tc::before{content:'\201C';position:absolute;top:.5rem;left:.95rem;font-size:3.2rem;color:rgba(201,148,58,.12);font-family:Georgia,serif;line-height:1}
+    .tst{display:flex;gap:2px;margin-bottom:.7rem}
+    .tst span{color:var(--gold);font-size:.72rem}
+    .tt{font-style:italic;line-height:1.8;color:var(--text-md);padding-top:.45rem;margin-bottom:1rem;font-size:.95rem}
+    .tau{font-family:'Cinzel',serif;font-size:.74rem;letter-spacing:.07em;color:var(--maroon)}
+    .tpl{font-size:.74rem;color:var(--brown);font-style:italic}
+
+    /* FOOTER */
+    footer{background:var(--maroon-dk);padding:4rem 2rem 2rem;color:rgba(253,246,227,.65)}
+    .fi{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.8rem;padding-bottom:2.8rem;border-bottom:1px solid rgba(201,148,58,.16)}
+    .fbl{display:flex;align-items:center;gap:.85rem;margin-bottom:.9rem}
+    .fbl img{width:48px;height:48px;border-radius:50%;border:1px solid rgba(201,148,58,.3);background:#fff;object-fit:contain}
+    .fbn{font-family:'Cinzel Decorative',cursive;font-size:1.05rem;color:var(--cream)}
+    .fbte{font-family:'Noto Serif Telugu',serif;font-size:.7rem;color:var(--gold)}
+    .fdesc{font-size:.86rem;line-height:1.8;margin-bottom:1.1rem}
+    .fctc{font-size:.83rem;line-height:2;color:rgba(253,246,227,.52)}
+    .fctc a{color:var(--gold-lt);transition:color .3s}.fctc a:hover{color:var(--gold)}
+    .fct{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.19em;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem}
+    .fl{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+    .fl a,.fl span{color:rgba(253,246,227,.52);font-size:.84rem;transition:color .3s;cursor:pointer}
+    .fl a:hover,.fl span:hover{color:var(--gold-pale)}
+    .fbot{max-width:1300px;margin:1.8rem auto 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;font-size:.74rem}
+    .fpay{display:flex;gap:.4rem;flex-wrap:wrap}
+    .fpb{background:rgba(253,246,227,.07);border:1px solid rgba(201,148,58,.18);padding:.16rem .55rem;font-family:'Cinzel',serif;font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-pale)}
+
+    /* QUICK VIEW MODAL */
+    .mback{position:fixed;inset:0;z-index:9000;background:rgba(20,3,8,.82);backdrop-filter:blur(5px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;padding:1rem}
+    .mback.open{opacity:1;pointer-events:all}
+    .modal{background:var(--cream);max-width:860px;width:100%;max-height:92vh;overflow-y:auto;display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(201,148,58,.28);box-shadow:0 28px 80px var(--sd);transform:scale(.94);transition:transform .3s}
+    .mback.open .modal{transform:scale(1)}
+    .mimgw{background:linear-gradient(145deg,#f5e8d0,#ead8b0);display:flex;align-items:center;justify-content:center;overflow:hidden;min-height:300px}
+    .mimgw img{width:100%;height:100%;object-fit:cover}
+    .mbody{padding:2.3rem;overflow-y:auto}
+    .mcls{float:right;background:none;border:none;cursor:pointer;color:var(--maroon);font-size:1.25rem;margin-bottom:.35rem;transition:color .3s,transform .3s}
+    .mcls:hover{color:var(--gold);transform:rotate(90deg)}
+    .mn{font-family:'Cinzel',serif;font-size:1.3rem;color:var(--maroon);line-height:1.25;margin-bottom:.22rem}
+    .mnte{font-family:'Noto Serif Telugu',serif;font-size:.95rem;color:var(--brown)}
+    .mp{font-family:'Cinzel',serif;font-size:1.5rem;color:var(--maroon);margin:1rem 0 .25rem}
+    .mdesc{line-height:1.85;color:var(--text-md);font-size:.93rem;margin:1rem 0 1.3rem}
+    .mlbl{font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--maroon);margin-bottom:.5rem;display:block}
+    .qrow{display:flex;gap:.45rem;align-items:center;margin-bottom:1.3rem}
+    .qb{width:34px;height:34px;border:1px solid rgba(92,10,32,.28);background:transparent;cursor:pointer;font-family:'Cinzel',serif;font-size:.95rem;color:var(--maroon);transition:background .3s,color .3s}
+    .qb:hover{background:var(--maroon);color:var(--cream)}
+    .qv{width:44px;height:34px;border:1px solid rgba(92,10,32,.28);text-align:center;font-family:'Cinzel',serif;font-size:.9rem;color:var(--maroon);background:transparent}
+    .madd{width:100%;font-family:'Cinzel',serif;font-size:.76rem;letter-spacing:.17em;text-transform:uppercase;padding:.88rem;border:none;cursor:pointer;background:linear-gradient(135deg,var(--gold),var(--gold-lt) 50%,var(--gold));background-size:200%;color:var(--maroon-dk);clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0%100%);transition:background-position .4s,transform .2s}
+    .madd:hover{background-position:100%;transform:translateY(-2px)}
+
+    /* CART PANEL */
+    .cart-panel{position:fixed;top:0;right:0;bottom:0;width:min(420px,100vw);background:var(--cream);z-index:9100;box-shadow:-8px 0 40px var(--sd);transform:translateX(100%);transition:transform .4s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column}
+    .cart-panel.open{transform:translateX(0)}
+    .cart-backdrop{position:fixed;inset:0;z-index:9099;background:rgba(20,3,8,.5);opacity:0;pointer-events:none;transition:opacity .4s}
+    .cart-backdrop.open{opacity:1;pointer-events:all}
+    .cart-hdr{padding:1.5rem;border-bottom:1px solid rgba(201,148,58,.2);display:flex;justify-content:space-between;align-items:center;background:var(--maroon)}
+    .cart-hdr h2{font-family:'Cinzel Decorative',cursive;font-size:1.1rem;color:var(--gold-pale)}
+    .cart-cls{background:none;border:none;cursor:pointer;color:var(--gold-pale);font-size:1.3rem;transition:color .2s,transform .3s}
+    .cart-cls:hover{color:var(--gold);transform:rotate(90deg)}
+    .cart-body{flex:1;overflow-y:auto;padding:1.5rem}
+    .cart-empty{text-align:center;padding:3rem 1rem}
+    .cart-empty .ce-ico{font-size:3rem;margin-bottom:1rem}
+    .cart-empty p{font-family:'Cinzel',serif;font-size:.85rem;color:var(--text-md)}
+    .cart-item{display:flex;gap:1rem;padding:1.1rem 0;border-bottom:1px solid rgba(201,148,58,.14);align-items:center}
+    .cart-item-img{width:64px;height:64px;object-fit:cover;border:1px solid rgba(201,148,58,.2);flex-shrink:0}
+    .cart-item-info{flex:1}
+    .cart-item-name{font-family:'Cinzel',serif;font-size:.8rem;color:var(--maroon);font-weight:600;margin-bottom:.2rem}
+    .cart-item-price{font-family:'Cinzel',serif;font-size:.86rem;color:var(--maroon)}
+    .cart-item-qty{display:flex;align-items:center;gap:.4rem;margin-top:.4rem}
+    .cqb{width:26px;height:26px;border:1px solid rgba(92,10,32,.25);background:transparent;cursor:pointer;font-size:.8rem;color:var(--maroon);display:flex;align-items:center;justify-content:center;transition:background .2s}
+    .cqb:hover{background:var(--maroon);color:var(--cream)}
+    .cqv{width:32px;text-align:center;font-family:'Cinzel',serif;font-size:.8rem;color:var(--maroon);border:none;background:transparent}
+    .cart-del{background:none;border:none;cursor:pointer;color:#c0392b;font-size:.85rem;padding:.2rem;transition:opacity .2s}
+    .cart-del:hover{opacity:.7}
+    .cart-ftr{padding:1.5rem;border-top:1px solid rgba(201,148,58,.2);background:var(--ivory)}
+    .cart-total-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem}
+    .cart-total-lbl{font-family:'Cinzel',serif;font-size:.88rem;color:var(--text-md)}
+    .cart-total-amt{font-family:'Cinzel',serif;font-size:1.3rem;font-weight:700;color:var(--maroon)}
+    .btn-checkout{width:100%;font-family:'Cinzel',serif;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;padding:1rem;border:none;cursor:pointer;background:var(--maroon);color:var(--gold-pale);transition:background .3s;margin-bottom:.7rem}
+    .btn-checkout:hover{background:var(--maroon-md)}
+    .btn-wa-order{width:100%;font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;padding:.82rem;border:none;cursor:pointer;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;gap:.5rem;transition:opacity .3s}
+    .btn-wa-order:hover{opacity:.88}
+    .cart-secure{text-align:center;font-size:.72rem;color:var(--text-md);margin-top:.6rem;font-style:italic}
+
+    /* CHECKOUT OVERLAY */
+    .chk-overlay{position:fixed;inset:0;z-index:9200;background:rgba(20,3,8,.88);backdrop-filter:blur(8px);display:none;align-items:flex-start;justify-content:center;padding:2rem 1rem;overflow-y:auto}
+    .chk-overlay.open{display:flex}
+    .chk-box{background:var(--cream);width:100%;max-width:900px;border:1px solid rgba(201,148,58,.3);box-shadow:0 32px 80px var(--sd);margin:auto}
+    .chk-hdr{background:var(--maroon);padding:1.5rem 2rem;display:flex;justify-content:space-between;align-items:center}
+    .chk-hdr h2{font-family:'Cinzel Decorative',cursive;font-size:1.15rem;color:var(--gold-pale)}
+    .chk-cls{background:none;border:none;cursor:pointer;color:var(--gold-pale);font-size:1.3rem;transition:transform .3s}
+    .chk-cls:hover{transform:rotate(90deg)}
+    /* Step indicator */
+    .chk-steps{display:flex;align-items:center;padding:1.5rem 2rem;border-bottom:1px solid rgba(201,148,58,.15);background:var(--ivory)}
+    .chk-step{display:flex;align-items:center;gap:.6rem;font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(90,48,32,.45)}
+    .chk-step.active{color:var(--maroon)}
+    .chk-step.done{color:var(--green)}
+    .step-num{width:28px;height:28px;border-radius:50%;border:1px solid currentColor;display:flex;align-items:center;justify-content:center;font-size:.72rem;flex-shrink:0;transition:background .3s,color .3s}
+    .chk-step.done .step-num{background:var(--green);border-color:var(--green);color:#fff}
+    .chk-step.active .step-num{background:var(--maroon);border-color:var(--maroon);color:var(--gold-pale)}
+    .step-sep{flex:1;height:1px;background:rgba(201,148,58,.2);margin:0 .5rem}
+    /* Step panels */
+    .chk-panel{display:none;padding:2rem}
+    .chk-panel.active{display:block}
+    /* Form */
+    .chk-form-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1.5rem}
+    .chk-form-full{grid-column:1/-1}
+    .chk-inp-wrap{display:flex;flex-direction:column;gap:.3rem}
+    .chk-lbl{font-family:'Cinzel',serif;font-size:.63rem;letter-spacing:.12em;text-transform:uppercase;color:var(--maroon)}
+    .chk-inp{padding:.78rem;border:1px solid rgba(201,148,58,.3);background:#fff;font-size:.9rem;color:var(--text-dk);width:100%;transition:border-color .2s;font-family:'EB Garamond',serif}
+    .chk-inp:focus{outline:none;border-color:var(--maroon)}
+    .chk-inp.error{border-color:#c0392b}
+    .chk-inp-err{font-size:.72rem;color:#c0392b;font-style:italic}
+    .chk-order-summary{background:var(--ivory);border:1px solid rgba(201,148,58,.2);padding:1.5rem;margin-top:1.5rem}
+    .chk-sum-title{font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--maroon);margin-bottom:1rem}
+    .chk-sum-item{display:flex;justify-content:space-between;font-size:.88rem;padding:.35rem 0;border-bottom:1px solid rgba(201,148,58,.1)}
+    .chk-sum-total{display:flex;justify-content:space-between;font-family:'Cinzel',serif;font-weight:700;color:var(--maroon);font-size:1rem;padding-top:.7rem;margin-top:.4rem}
+    .chk-trust-row{display:flex;gap:1.5rem;justify-content:center;margin-top:1.5rem;flex-wrap:wrap}
+    .chk-trust-item{display:flex;align-items:center;gap:.4rem;font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:var(--text-md)}
+    .btn-chk-next{width:100%;font-family:'Cinzel',serif;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;padding:1rem;border:none;cursor:pointer;background:var(--maroon);color:var(--gold-pale);clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0%100%);transition:background .3s;margin-top:1.5rem}
+    .btn-chk-next:hover{background:var(--maroon-md)}
+    /* QR Payment Step */
+    .qr-wrap{display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start}
+    .qr-box{text-align:center;background:#fff;border:1px solid rgba(201,148,58,.25);padding:2rem}
+    .qr-canvas-wrap{display:flex;justify-content:center;margin:1rem 0}
+    #qr-canvas{width:220px!important;height:220px!important}
+    .qr-upi-id{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.1em;background:var(--ivory);border:1px solid rgba(201,148,58,.2);padding:.6rem;margin-top:.7rem;word-break:break-all;color:var(--maroon)}
+    .qr-amount-badge{background:var(--maroon);color:var(--gold-pale);font-family:'Cinzel',serif;font-size:1.2rem;padding:.5rem 1.5rem;display:inline-block;margin-bottom:1rem}
+    .qr-instructions{background:var(--ivory);border:1px solid rgba(201,148,58,.2);padding:1.5rem}
+    .qr-instructions h4{font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--maroon);margin-bottom:1rem}
+    .qr-step{display:flex;gap:.8rem;margin-bottom:.9rem;align-items:flex-start}
+    .qr-step-num{width:24px;height:24px;border-radius:50%;background:var(--maroon);color:var(--gold-pale);font-family:'Cinzel',serif;font-size:.72rem;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .qr-step-txt{font-size:.88rem;color:var(--text-md);line-height:1.5}
+    .qr-apps{display:flex;gap:.6rem;flex-wrap:wrap;margin:1rem 0}
+    .qr-app{background:#fff;border:1px solid rgba(201,148,58,.2);padding:.4rem .8rem;font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--maroon)}
+    .qr-paid-btn{width:100%;font-family:'Cinzel',serif;font-size:.76rem;letter-spacing:.18em;text-transform:uppercase;padding:1rem;border:none;cursor:pointer;background:var(--green);color:#fff;margin-top:1.5rem;transition:opacity .3s}
+    .qr-paid-btn:hover{opacity:.88}
+    .qr-timer{font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.1em;color:rgba(90,48,32,.5);margin-top:.5rem;text-align:center}
+    /* Confirmation Step */
+    .conf-wrap{text-align:center;padding:2rem 1rem}
+    .conf-ico{font-size:4rem;margin-bottom:1rem;animation:popIn .5s}
+    @keyframes popIn{from{transform:scale(0.5);opacity:0}to{transform:scale(1);opacity:1}}
+    .conf-title{font-family:'Cinzel Decorative',cursive;font-size:1.8rem;color:var(--maroon);margin-bottom:.5rem}
+    .conf-sub{font-family:'Noto Serif Telugu',serif;font-size:1.05rem;color:var(--gold);margin-bottom:1.5rem}
+    .conf-oid{background:var(--ivory);border:1px solid rgba(201,148,58,.3);display:inline-block;padding:.8rem 2rem;font-family:'Cinzel',serif;font-size:1rem;color:var(--maroon);letter-spacing:.1em;margin-bottom:1.5rem}
+    .conf-detail{font-size:.9rem;color:var(--text-md);line-height:1.8;max-width:480px;margin:0 auto 2rem;font-style:italic}
+    .conf-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+    .btn-conf-wa{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;padding:.82rem 2rem;background:#25D366;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;gap:.5rem;transition:opacity .3s}
+    .btn-conf-wa:hover{opacity:.88}
+    .btn-conf-track{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;padding:.82rem 2rem;background:var(--maroon);color:var(--gold-pale);border:none;cursor:pointer;transition:background .3s}
+    .btn-conf-track:hover{background:var(--maroon-md)}
+    .conf-delivery{background:linear-gradient(135deg,var(--maroon-dk),var(--maroon));color:var(--gold-pale);padding:1.5rem;max-width:400px;margin:1.5rem auto 0;font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.08em;line-height:1.9}
+
+    /* TRACKING MODAL */
+    .trk-overlay{position:fixed;inset:0;z-index:9300;background:rgba(20,3,8,.88);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;padding:1.5rem}
+    .trk-overlay.open{display:flex}
+    .trk-box{background:var(--cream);width:100%;max-width:720px;border:1px solid rgba(201,148,58,.3);box-shadow:0 28px 80px var(--sd);max-height:90vh;overflow-y:auto}
+    .trk-hdr{background:var(--maroon);padding:1.4rem 1.8rem;display:flex;justify-content:space-between;align-items:center}
+    .trk-hdr h2{font-family:'Cinzel Decorative',cursive;font-size:1rem;color:var(--gold-pale)}
+    .trk-body{padding:2rem}
+    .trk-search-row{display:flex;gap:.5rem;margin-bottom:1.5rem}
+    .trk-inp{flex:1;padding:.82rem;border:1px solid rgba(201,148,58,.3);background:#fff;font-family:'EB Garamond',serif;font-size:.92rem;color:var(--text-dk)}
+    .trk-inp:focus{outline:none;border-color:var(--maroon)}
+    .btn-trk{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;padding:.82rem 1.5rem;background:var(--maroon);color:var(--gold-pale);border:none;cursor:pointer;transition:background .3s;white-space:nowrap}
+    .btn-trk:hover{background:var(--maroon-md)}
+    .trk-result{display:none}
+    .trk-result.show{display:block}
+    .trk-order-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;border-bottom:1px solid rgba(201,148,58,.15);padding-bottom:1.2rem;margin-bottom:1.5rem}
+    .trk-oid{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--maroon);font-weight:600}
+    .trk-date{font-size:.82rem;color:var(--text-md);font-style:italic}
+    /* Status Stepper */
+    .trk-stepper{display:flex;align-items:center;margin:1.5rem 0 2rem;padding:0 .5rem}
+    .trk-stp{display:flex;flex-direction:column;align-items:center;gap:.5rem;flex:1;position:relative;z-index:1}
+    .trk-stp-ico{width:42px;height:42px;border-radius:50%;border:2px solid rgba(201,148,58,.25);background:#fff;display:flex;align-items:center;justify-content:center;font-size:1.15rem;transition:all .4s}
+    .trk-stp.done .trk-stp-ico{background:var(--green);border-color:var(--green);box-shadow:0 4px 12px rgba(45,106,31,.3)}
+    .trk-stp.active .trk-stp-ico{background:var(--maroon);border-color:var(--maroon);box-shadow:0 4px 12px var(--sd);animation:pulse-ring 2s infinite}
+    @keyframes pulse-ring{0%,100%{box-shadow:0 0 0 0 rgba(92,10,32,.4)}50%{box-shadow:0 0 0 8px rgba(92,10,32,0)}}
+    .trk-stp-lbl{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-md);text-align:center}
+    .trk-stp.done .trk-stp-lbl,.trk-stp.active .trk-stp-lbl{color:var(--maroon);font-weight:600}
+    .trk-line{flex:1;height:2px;background:rgba(201,148,58,.2);position:relative;top:-14px;z-index:0}
+    .trk-line.done{background:var(--green)}
+    .trk-details{background:var(--ivory);border:1px solid rgba(201,148,58,.2);padding:1.5rem}
+    .trk-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+    .trk-detail-lbl{font-family:'Cinzel',serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(90,48,32,.5);margin-bottom:.3rem}
+    .trk-detail-val{font-size:.9rem;color:var(--text-dk);font-weight:500}
+    .trk-awb-link{color:var(--gold);text-decoration:underline;cursor:pointer;font-size:.82rem}
+    .trk-not-found{text-align:center;padding:2rem;font-family:'Cinzel',serif;font-size:.85rem;color:var(--text-md)}
+
+    /* MOBILE NAV */
+    .mobnav{display:none;position:fixed;inset:0;z-index:1001;background:var(--cream);padding:2rem;flex-direction:column;gap:1.5rem;overflow-y:auto}
+    .mobnav.open{display:flex}
+    .mobnav a,.mobnav span{font-family:'Cinzel',serif;font-size:.95rem;letter-spacing:.13em;text-transform:uppercase;color:var(--maroon);padding:.9rem 0;border-bottom:1px solid rgba(201,148,58,.18);cursor:pointer;display:block}
+    .mobcls{align-self:flex-end;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--maroon)}
+
+    /* TOAST */
+    .toast{position:fixed;bottom:5rem;left:50%;transform:translateX(-50%);background:var(--maroon);color:var(--gold-pale);padding:.7rem 1.6rem;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.13em;box-shadow:0 8px 28px var(--sd);z-index:99999;opacity:0;transition:opacity .3s;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);white-space:nowrap;pointer-events:none}
+    .toast.show{opacity:1}
+
+    /* WHATSAPP FLOAT */
+    .float-wa{position:fixed;bottom:1.5rem;right:1.5rem;width:55px;height:55px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 16px rgba(0,0,0,.25);z-index:1000;transition:transform .3s,box-shadow .3s}
+    .float-wa:hover{transform:translateY(-4px) scale(1.05);box-shadow:0 10px 24px rgba(0,0,0,.3)}
+    .float-wa img{width:32px;height:32px}
+
+    /* SCROLL REVEAL */
+    .rev{opacity:0;transform:translateY(34px);transition:opacity .7s ease,transform .7s ease}
+    .rev.vis{opacity:1;transform:translateY(0)}
+    .d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}.d5{transition-delay:.4s}
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .fi{grid-template-columns:1fr 1fr}
+      .lb{grid-template-columns:1fr}
+      .cd{justify-content:flex-start}
+      .split-wrap{grid-template-columns:1fr;gap:2rem}
+      .qr-wrap{grid-template-columns:1fr}
+      .trk-detail-grid{grid-template-columns:1fr}
+    }
+    @media(max-width:680px){
+      .nav-links,.btn-book{display:none}
+      .ham{display:block}
+      .fi{grid-template-columns:1fr}
+      .modal{grid-template-columns:1fr}
+      .mimgw{display:none}
+      .chk-form-grid{grid-template-columns:1fr}
+      .pl-countdown{padding:1rem 1.2rem;gap:.5rem}
+      .pl-unit{min-width:50px}
+      .conf-actions{flex-direction:column;align-items:center}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== PRE-LAUNCH PAGE ===== -->
+<div id="prelaunch">
+  <div id="pl-overlay"></div>
+  <div class="pl-mandala">
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#C9943A" transform="translate(200,200)">
+        <circle r="188" stroke-width="1"/><circle r="148" stroke-width=".5"/><circle r="108" stroke-width="1"/><circle r="68" stroke-width=".5"/><circle r="34" stroke-width="1"/><circle r="9" fill="#C9943A" opacity=".7" stroke="none"/>
+        <g><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(45)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(90)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(135)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g>
+        <g transform="rotate(180)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(225)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(270)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(315)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g>
+        <line x1="-188" y1="0" x2="188" y2="0" stroke-width=".3" opacity=".4"/><line x1="0" y1="-188" x2="0" y2="188" stroke-width=".3" opacity=".4"/><line x1="-133" y1="-133" x2="133" y2="133" stroke-width=".3" opacity=".4"/><line x1="133" y1="-133" x2="-133" y2="133" stroke-width=".3" opacity=".4"/>
+      </g>
+    </svg>
+  </div>
+  <div class="pl-sparks" id="pl-sparks"></div>
+
+  <div id="pl-inner">
+    <div class="pl-eyebrow">✦ The Grand Unveiling ✦</div>
+
+    <div class="pl-diya-wrap" id="pl-diya" onclick="lightDiya(this, event)">
+      <div class="pl-diya-ring"></div>
+      <img class="pl-diya-img" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=600,fit=crop/tNrOkFJHrQGKzMyG/gemini_generated_image_az55qzaz55qzaz55-1-qoE2sOBnb4lPbbYH.png" alt="Sacred Diya"/>
+      <div class="pl-diya-flame"></div>
+      <div class="pl-tap-hint"><span>Touch to Light Diya 🪔</span></div>
+    </div>
+
+    <h1 class="pl-title" id="pl-title">Guru Padukam</h1>
+    <div class="pl-subtitle">గురు పాదుకం — Organic Pooja Materials</div>
+    <p class="pl-tagline" id="pl-tagline">Awaiting the divine spark…</p>
+
+    <div class="pl-countdown">
+      <div class="pl-unit"><span class="pl-num" id="pl-d">00</span><span class="pl-lbl">Days</span></div>
+      <span class="pl-colon">:</span>
+      <div class="pl-unit"><span class="pl-num" id="pl-h">00</span><span class="pl-lbl">Hours</span></div>
+      <span class="pl-colon">:</span>
+      <div class="pl-unit"><span class="pl-num" id="pl-m">00</span><span class="pl-lbl">Mins</span></div>
+      <span class="pl-colon">:</span>
+      <div class="pl-unit"><span class="pl-num" id="pl-s">00</span><span class="pl-lbl">Secs</span></div>
+    </div>
+
+    <div class="pl-diyas-lit">Diyas Lit Globally: <span id="pl-global">108</span></div>
+
+    <div class="pl-actions">
+      <button class="btn-pl-wa" onclick="window.open('https://wa.me/919849787168?text=Namaste!%20Please%20notify%20me%20when%20Guru%20Padukam%20launches%20on%2011.11.2026%20%F0%9F%99%8F','_blank')">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+        Notify Me on WhatsApp
+      </button>
+      <button class="btn-pl-enter" onclick="enterSite()">Preview Site ↗</button>
+    </div>
+
+    <div class="pl-launch-date">Official Launch: 12 · 05 · 2026 · 11:11:11 AM IST</div>
+  </div>
+</div>
+
+<!-- ===== MAIN SITE ===== -->
+<div id="mainsite">
+
+  <!-- Announcement Bar -->
+  <div class="ann">
+    <div class="ann-track">
+      <span>100% Organic &amp; Chemical-Free</span>
+      <span>Free Delivery above ₹499</span>
+      <span>Trusted by Temples &amp; Purohits</span>
+      <span>COD Available | Pan-India</span>
+      <span>Traditional Vedic Preparation</span>
+      <span>Made with Devotion 🙏</span>
+      <span>Shiprocket Powered Delivery 🚀</span>
+      <span>100% Organic &amp; Chemical-Free</span>
+      <span>Free Delivery above ₹499</span>
+      <span>Trusted by Temples &amp; Purohits</span>
+      <span>COD Available | Pan-India</span>
+      <span>Traditional Vedic Preparation</span>
+      <span>Made with Devotion 🙏</span>
+      <span>Shiprocket Powered Delivery 🚀</span>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-inner">
+      <a class="logo" onclick="scrollToTop()">
+        <img class="logo-img" src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/tNrOkFJHrQGKzMyG/chatgpt-image-mar-21-2026-12_12_33-pm-hxiX10mZJPlTS4KF.png" alt="GuruPadukam"/>
+        <div><div class="logo-en">Guru Padukam</div><div class="logo-te">గురు పాదుకం</div></div>
+      </a>
+      <ul class="nav-links">
+        <li><a onclick="scrollToTop()">Home</a></li>
+        <li><a onclick="jumpTo('products')">Products</a></li>
+        <li><a onclick="jumpTo('why')">About</a></li>
+        <li><a onclick="openTracking()">Track Order</a></li>
+        <li><a onclick="jumpTo('contact')">Contact</a></li>
+      </ul>
+      <div class="nav-r">
+        <button class="ni" onclick="jumpTo('products')" aria-label="Search">🔍</button>
+        <button class="ni" aria-label="Wishlist">♡</button>
+        <button class="ni" onclick="openCart()" aria-label="Cart">🛒<span class="cb" id="cart-count">0</span></button>
+        <button class="btn-book" onclick="openCart()">Shop Now</button>
+        <button class="ham" id="hamBtn" aria-label="Menu">☰</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav -->
+  <div class="mobnav" id="mobnav">
+    <button class="mobcls" id="mobcls" aria-label="Close">✕</button>
+    <a onclick="scrollToTop();closeMobNav()">Home</a>
+    <a onclick="jumpTo('products');closeMobNav()">Products</a>
+    <a onclick="jumpTo('why');closeMobNav()">About Us</a>
+    <a onclick="openTracking();closeMobNav()">Track My Order</a>
+    <a onclick="jumpTo('contact');closeMobNav()">Contact</a>
+    <a onclick="openCart();closeMobNav()" style="color:var(--gold)">🛒 Shop Now</a>
+  </div>
+
+  <!-- Divine Section -->
+  <section class="divine-sec">
+    <div class="split-wrap">
+      <div>
+        <div class="sk2 rev" style="color:var(--maroon)">✦ Divine Devotion</div>
+        <h2 class="st rev" style="margin-bottom:2rem">As Pure As Mother Ganga</h2>
+        <div class="rev" style="border-radius:8px;box-shadow:0 12px 32px var(--sd);border:2px solid var(--gold);overflow:hidden;background:#05020A;position:relative;aspect-ratio:16/9">
+          <!-- Sacred Animated Diya — works offline, no external dependencies -->
+          <div id="diya-scene" style="width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden;background:radial-gradient(ellipse 80% 70% at 50% 60%,#1a0508 0%,#05020A 100%)">
+            <!-- Rotating mandala bg -->
+            <svg style="position:absolute;width:100%;height:100%;opacity:.05;animation:plrot 40s linear infinite" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" stroke="#C9943A" transform="translate(200,200)">
+                <circle r="188" stroke-width="1"/><circle r="148" stroke-width=".5"/><circle r="108" stroke-width="1"/><circle r="68" stroke-width=".5"/><circle r="34" stroke-width="1"/>
+                <g><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(45)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(90)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(135)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(180)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(225)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(270)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(315)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g>
+                <line x1="-188" y1="0" x2="188" y2="0" stroke-width=".3" opacity=".4"/><line x1="0" y1="-188" x2="0" y2="188" stroke-width=".3" opacity=".4"/><line x1="-133" y1="-133" x2="133" y2="133" stroke-width=".3" opacity=".4"/>
+              </g>
+            </svg>
+            <!-- Glow halos -->
+            <div style="position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(201,148,58,.18) 0%,transparent 70%);animation:halo1 3s ease-in-out infinite alternate;top:50%;left:50%;transform:translate(-50%,-55%)"></div>
+            <div style="position:absolute;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(255,160,40,.22) 0%,transparent 65%);animation:halo2 2.3s ease-in-out infinite alternate;top:50%;left:50%;transform:translate(-50%,-58%)"></div>
+            <!-- Diya body (SVG) -->
+            <svg viewBox="0 0 200 140" style="width:min(260px,55%);position:relative;z-index:2;filter:drop-shadow(0 8px 24px rgba(201,148,58,.5))">
+              <!-- Diya base plate -->
+              <ellipse cx="100" cy="118" rx="62" ry="12" fill="#2a0f05" opacity=".6"/>
+              <!-- Diya cup outer -->
+              <path d="M42 108 Q40 90 60 82 Q100 72 140 82 Q160 90 158 108 Q130 120 100 122 Q70 120 42 108Z" fill="#8B4513"/>
+              <!-- Diya cup inner shading -->
+              <path d="M55 103 Q53 90 70 85 Q100 78 130 85 Q147 90 145 103 Q122 113 100 115 Q78 113 55 103Z" fill="#6B3010"/>
+              <!-- Inner bowl -->
+              <ellipse cx="100" cy="100" rx="36" ry="10" fill="#1a0805" opacity=".7"/>
+              <!-- Oil surface shimmer -->
+              <ellipse cx="100" cy="100" rx="30" ry="7" fill="none" stroke="rgba(201,148,58,.4)" stroke-width="1"/>
+              <!-- Wick -->
+              <rect x="98" y="74" width="4" height="26" rx="2" fill="#3d1f08"/>
+              <!-- Flame outer (orange) -->
+              <path d="M100 72 Q112 58 108 40 Q120 55 116 68 Q126 52 118 35 Q134 52 126 65 Q136 48 128 30 Q148 52 134 70 Q128 78 100 82 Q72 78 66 70 Q52 52 72 30 Q64 48 74 65 Q66 52 82 35 Q74 52 84 68 Q80 55 92 40 Q88 58 100 72Z" fill="rgba(255,120,20,.85)" style="animation:flame1 1.8s ease-in-out infinite alternate;transform-origin:100px 75px"/>
+              <!-- Flame mid (yellow) -->
+              <path d="M100 70 Q109 56 106 42 Q116 56 113 67 Q121 52 114 37 Q128 55 120 68 Q113 75 100 79 Q87 75 80 68 Q72 55 86 37 Q79 52 87 67 Q84 56 94 42 Q91 56 100 70Z" fill="rgba(255,190,30,.9)" style="animation:flame2 1.5s ease-in-out infinite alternate;transform-origin:100px 70px"/>
+              <!-- Flame core (white/cream) -->
+              <path d="M100 67 Q104 58 103 50 Q108 58 107 65 Q110 57 106 48 Q113 58 110 65 Q106 70 100 73 Q94 70 90 65 Q87 58 94 48 Q90 57 93 65 Q92 58 97 50 Q96 58 100 67Z" fill="rgba(255,245,200,.95)" style="animation:flame3 1.2s ease-in-out infinite alternate;transform-origin:100px 62px"/>
+              <!-- Diya handle -->
+              <path d="M140 100 Q165 95 170 105 Q165 115 140 110Z" fill="#7B3910"/>
+              <!-- Decoration lines on diya -->
+              <path d="M60 96 Q100 90 140 96" fill="none" stroke="rgba(201,148,58,.4)" stroke-width="1.5"/>
+              <path d="M55 103 Q100 97 145 103" fill="none" stroke="rgba(201,148,58,.3)" stroke-width="1"/>
+            </svg>
+            <!-- Text overlay -->
+            <div style="position:relative;z-index:3;text-align:center;margin-top:1rem">
+              <div style="font-family:'Cinzel',serif;font-size:clamp(.7rem,1.8vw,.9rem);letter-spacing:.22em;text-transform:uppercase;color:var(--gold);animation:fadeFlicker 3s ease-in-out infinite alternate">✦ Sacred Ganga Harathi ✦</div>
+              <div style="font-family:'Noto Serif Telugu',serif;font-size:clamp(.7rem,1.4vw,.82rem);color:rgba(245,223,160,.6);margin-top:.3rem">గంగా హారతి — పవిత్ర జ్యోతి</div>
+            </div>
+          </div>
+          <style>
+            @keyframes halo1{from{opacity:.5;transform:translate(-50%,-55%) scale(1)}to{opacity:1;transform:translate(-50%,-55%) scale(1.15)}}
+            @keyframes halo2{from{opacity:.6;transform:translate(-50%,-58%) scale(1)}to{opacity:1;transform:translate(-50%,-58%) scale(1.2)}}
+            @keyframes flame1{from{transform:scaleX(1) scaleY(1) skewX(-3deg)}to{transform:scaleX(.92) scaleY(1.06) skewX(4deg)}}
+            @keyframes flame2{from{transform:scaleX(1) scaleY(1) skewX(4deg)}to{transform:scaleX(.88) scaleY(1.08) skewX(-5deg)}}
+            @keyframes flame3{from{transform:scaleX(1) scaleY(1)}to{transform:scaleX(.85) scaleY(1.12)}}
+            @keyframes fadeFlicker{from{opacity:.7}to{opacity:1}}
+          </style>
+        </div>
+        <p class="rev" style="margin-top:1.5rem;font-style:italic;color:var(--text-md);font-size:.95rem;line-height:1.6">
+          Experience the divine aura of the sacred Ganga Harathi. We prepare every Pooja material with this exact devotion, ensuring a natural purity that touches the soul.
+        </p>
+      </div>
+      <div class="hl-box rev">
+        <div class="sk2" style="color:var(--gold)">✦ Coming Soon</div>
+        <h2 class="st" style="margin-bottom:2rem;font-size:1.8rem">Release Highlights</h2>
+        <div class="hl-item">
+          <div class="hl-ico">🌿</div>
+          <div class="hl-text"><h4>Organic Dhoop Sticks</h4><p>Charcoal-free, hand-rolled dhoop sticks made from temple flowers and pure cow ghee. Launching next week!</p></div>
+        </div>
+        <div class="hl-item">
+          <div class="hl-ico">🪔</div>
+          <div class="hl-text"><h4>Brass Pooja Thali Set</h4><p>Heavy-gauge traditional brass thali set for daily aarti. Limited edition batch being polished now.</p></div>
+        </div>
+        <div class="hl-item">
+          <div class="hl-ico">📿</div>
+          <div class="hl-text"><h4>Panchagavya Diyas</h4><p>Eco-friendly diyas crafted from pure Panchagavya. Leaves zero residue and purifies the air.</p></div>
+        </div>
+        <button class="btn-g" style="width:100%;margin-top:1rem" onclick="window.open('https://wa.me/919849787168?text=Namaste!%20Please%20notify%20me%20when%20the%20Organic%20Dhoop%20Sticks%20launch.','_blank')">🔔 Notify Me on WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Slider -->
+  <section class="hero">
+    <svg class="mandala" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg"><g fill="none" stroke="#C9943A" transform="translate(200,200)"><circle r="188" stroke-width="1"/><circle r="148" stroke-width=".5"/><circle r="108" stroke-width="1"/><circle r="68" stroke-width=".5"/><circle r="34" stroke-width="1"/><circle r="9" fill="#C9943A" opacity=".7" stroke="none"/><g><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(45)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(90)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(135)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(180)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(225)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(270)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><g transform="rotate(315)"><ellipse cx="0" cy="-120" rx="12" ry="27" stroke-width=".8"/></g><line x1="-188" y1="0" x2="188" y2="0" stroke-width=".3" opacity=".4"/><line x1="0" y1="-188" x2="0" y2="188" stroke-width=".3" opacity=".4"/><line x1="-133" y1="-133" x2="133" y2="133" stroke-width=".3" opacity=".4"/><line x1="133" y1="-133" x2="-133" y2="133" stroke-width=".3" opacity=".4"/></g></svg>
+    <button class="arr" id="pa" onclick="goSlide(sliderCur-1)" aria-label="Prev">&#8592;</button>
+    <button class="arr" id="na" onclick="goSlide(sliderCur+1)" aria-label="Next">&#8594;</button>
+    <div class="slide s1 active"><div class="slide-bg"></div><div class="slide-ov"></div>
+      <div class="slide-body">
+        <div class="sk">✦ Organic Pooja Materials — Hyderabad</div>
+        <h1 class="sh">Sacred Puja Materials, Blessed by Nature</h1>
+        <div class="ste">శుద్ధమైన పూజా సామగ్రి — గురుపాదుకం</div>
+        <p class="sd_">100% organic, chemical-free essentials prepared the traditional Vedic way for temples, homes &amp; ceremonies.</p>
+        <div class="sbtns">
+          <button class="btn-g" onclick="jumpTo('products')">Shop All Products</button>
+          <button class="btn-gh" onclick="openCart()">View Cart</button>
+        </div>
+      </div>
+    </div>
+    <div class="slide s2"><div class="slide-bg"></div><div class="slide-ov"></div>
+      <div class="slide-body">
+        <div class="sk">✦ Guru Purnima Special</div>
+        <h1 class="sh">Pasupu &amp; Kumkum — Purest Form</h1>
+        <div class="ste">పసుపు కుంకుమ — సంప్రదాయ తయారీ</div>
+        <p class="sd_">Hand-ground turmeric &amp; kumkum, no artificial colours, no chemicals. Only purity from nature.</p>
+        <div class="sbtns">
+          <button class="btn-g" onclick="jumpTo('products')">View Pasupu &amp; Kumkum</button>
+          <button class="btn-gh" onclick="jumpTo('why')">Our Process</button>
+        </div>
+      </div>
+    </div>
+    <div class="slide s3"><div class="slide-bg"></div><div class="slide-ov"></div>
+      <div class="slide-body">
+        <div class="sk">✦ New Arrival</div>
+        <h1 class="sh">Sacred Yagnopavitam — Handspun Cotton</h1>
+        <div class="ste">యజ్ఞోపవీతం — హస్తనిర్మిత</div>
+        <p class="sd_">Authentically prepared sacred thread for Upanayanam &amp; daily rituals. Blessed and ready.</p>
+        <div class="sbtns">
+          <button class="btn-g" onclick="jumpTo('products')">Order Yagnopavitam</button>
+          <button class="btn-gh" onclick="window.open('https://wa.me/919849787168?text=Namaste!%20I%20would%20like%20to%20place%20a%20bulk%20order%20for%20Yagnopavitam.','_blank')">Bulk Orders</button>
+        </div>
+      </div>
+    </div>
+    <div class="hero-ctrl">
+      <div class="dot active" data-i="0" onclick="goSlide(0)"></div>
+      <div class="dot" data-i="1" onclick="goSlide(1)"></div>
+      <div class="dot" data-i="2" onclick="goSlide(2)"></div>
+    </div>
+  </section>
+
+  <!-- Trust Bar -->
+  <div class="trust">
+    <div class="ti"><span class="tic">🌿</span><div><div class="til">100% Organic</div><div class="tis">No chemicals ever</div></div></div>
+    <div class="ti"><span class="tic">🚚</span><div><div class="til">Shiprocket Delivery</div><div class="tis">Orders above ₹499 free</div></div></div>
+    <div class="ti"><span class="tic">🔄</span><div><div class="til">Easy Returns</div><div class="tis">Hassle-free policy</div></div></div>
+    <div class="ti"><span class="tic">📱</span><div><div class="til">UPI &amp; QR Pay</div><div class="tis">Instant &amp; secure</div></div></div>
+    <div class="ti"><span class="tic">🏛️</span><div><div class="til">Temple-Grade</div><div class="tis">Purohit trusted</div></div></div>
+  </div>
+
+  <!-- Combo Offer Banner -->
+  <section class="launch-sec">
+    <div class="li">
+      <div class="lb rev">
+        <div>
+          <div class="ltag">✦ Best Value</div>
+          <h2 class="lh">Complete Puja Combo Kit</h2>
+          <div class="lte">అన్ని పూజా సామగ్రి — ఒకే కిట్‌లో</div>
+          <p class="ldesc">All 5 sacred items — Pasupu, Kumkum, Gandham, Vibhuti &amp; Yagnopavitam — beautifully packaged in a traditional gift box. Perfect for festivals &amp; gifting.</p>
+          <div class="lbtns">
+            <button class="btn-g" onclick="addToCart('p6','Complete Puja Combo Kit',599,1,'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=500,fit=crop/tNrOkFJHrQGKzMyG/chatgpt-image-mar-24-2026-10_27_29-pm-uy3PQQ9sZQ3cAUb8.png');openCart()">Order Combo Kit →</button>
+            <button class="btn-gh" onclick="openQV({name:'Complete Puja Combo Kit',nameTe:'పూజా కిట్ (5-in-1)',price:'₹599',img:'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=500,fit=crop/tNrOkFJHrQGKzMyG/chatgpt-image-mar-24-2026-10_27_29-pm-uy3PQQ9sZQ3cAUb8.png',desc:'All 5 sacred products: Pasupu, Kumkum, Gandham, Vibhuti & Yagnopavitam — beautifully packed in a traditional gift box. Perfect for festivals, Guru Purnima, housewarming & gifting.',id:'p6'})">View Contents</button>
+          </div>
+        </div>
+        <div class="cd">
+          <div class="cu"><span class="cn" id="cdH">00</span><span class="cl">Hours</span></div>
+          <div class="cu"><span class="cn" id="cdM">00</span><span class="cl">Mins</span></div>
+          <div class="cu"><span class="cn" id="cdS">00</span><span class="cl">Secs</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="prod-sec" id="products">
+    <div class="pi">
+      <div class="sh-wrap rev">
+        <div class="sk2">✦ Curated Collection</div>
+        <h2 class="st">Our Products</h2>
+        <div class="ste2">మన ఉత్పత్తులు — పూజా సామగ్రి</div>
+        <div class="orn"><span>❁</span></div>
+      </div>
+      <div class="ftabs rev">
+        <button class="ft active" data-f="all">All Products</button>
+        <button class="ft" data-f="powder">Powders</button>
+        <button class="ft" data-f="thread">Sacred Thread</button>
+        <button class="ft" data-f="combo">Combo Kits</button>
+      </div>
+      <div class="pgrid" id="pgrid">
+        <!-- Products rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="why-sec" id="why">
+    <div class="wi">
+      <div class="sh-wrap rev">
+        <div class="sk2" style="color:var(--gold)">✦ Our Promise</div>
+        <h2 class="st" style="color:var(--cream)">Why Choose Guru Padukam?</h2>
+        <div class="ste2" style="color:var(--gold-pale)">మనం ఎందుకు అత్యుత్తమం?</div>
+        <div class="orn"><span>❁</span></div>
+      </div>
+      <div class="wgrid">
+        <div class="wc rev d1"><div class="wico">🌿</div><div class="wtit">100% Organic</div><div class="wdesc">No artificial colours, chemicals, or preservatives. Pure as nature intended — every single time.</div></div>
+        <div class="wc rev d2"><div class="wico">🏺</div><div class="wtit">Traditional Preparation</div><div class="wdesc">Ancient Vedic methods passed through generations of skilled craftsmen across the Deccan.</div></div>
+        <div class="wc rev d3"><div class="wico">🏛️</div><div class="wtit">Temple &amp; Purohit Trusted</div><div class="wdesc">Widely used in temples across Hyderabad &amp; endorsed by experienced purohits and panditji.</div></div>
+        <div class="wc rev d4"><div class="wico">🙏</div><div class="wtit">Made with Devotion</div><div class="wdesc">Each item prepared with prayer &amp; sacred intent — you can feel the difference in quality.</div></div>
+        <div class="wc rev d5"><div class="wico">🚀</div><div class="wtit">Shiprocket Delivery</div><div class="wdesc">Fast, tracked, pan-India delivery powered by Shiprocket. Know where your parcel is 24/7.</div></div>
+        <div class="wc rev d2"><div class="wico">📱</div><div class="wtit">UPI QR Payment</div><div class="wdesc">Scan &amp; pay instantly with GPay, PhonePe, Paytm or any UPI app. Safe, zero-fee transactions.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="tsti-sec">
+    <div class="tsti-i">
+      <div class="sh-wrap rev">
+        <div class="sk2">✦ Devotee Reviews</div>
+        <h2 class="st">What Our Customers Say</h2>
+        <div class="ste2">భక్తుల అనుభవాలు</div>
+        <div class="orn"><span>❁</span></div>
+      </div>
+      <div class="tgrid">
+        <div class="tc rev d1"><div class="tst"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="tt">"The Pasupu and Kumkum quality is unmatched. Our temple priest specifically requested us to continue ordering from GuruPadukam. The colour is so natural and vibrant."</div><div class="tau">Padmavathi Rao</div><div class="tpl">Nizampet, Hyderabad</div></div>
+        <div class="tc rev d2"><div class="tst"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="tt">"Ordered Yagnopavitam for my son's Upanayanam. Perfect quality, authentic thread, delivered well before the auspicious date via Shiprocket tracking — highly recommended!"</div><div class="tau">Srinivas Sharma</div><div class="tpl">Secunderabad, Telangana</div></div>
+        <div class="tc rev d3"><div class="tst"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div><div class="tt">"The Gandham fragrance is authentic Mysore sandalwood — no synthetic smell at all. UPI payment was instant. I have been searching for this purity for years. జయ్ గురు పాదుకం! 🙏"</div><div class="tau">Lakshmi Devi Venkataraman</div><div class="tpl">Karimnagar, Telangana</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="fi">
+      <div>
+        <div class="fbl">
+          <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,fit=crop/tNrOkFJHrQGKzMyG/chatgpt-image-mar-21-2026-12_12_33-pm-hxiX10mZJPlTS4KF.png" alt="logo"/>
+          <div><div class="fbn">Guru Padukam</div><div class="fbte">గురు పాదుకం</div></div>
+        </div>
+        <p class="fdesc">Organic Pooja Materials prepared the traditional Vedic way. Serving devotees, temples &amp; purohits across India with purity and devotion.</p>
+        <div class="fctc">
+          📍 Nizampet, Hyderabad – 500090<br/>
+          📞 <a href="tel:+919849787168">+91 98497 87168</a><br/>
+          ✉️ <a href="mailto:care.gurupadukam@gmail.com">care.gurupadukam@gmail.com</a><br/>
+          🕐 Mon–Sat, 9:00 AM – 7:00 PM IST
+        </div>
+      </div>
+      <div>
+        <div class="fct">Quick Links</div>
+        <ul class="fl">
+          <li><span onclick="scrollToTop()">Home</span></li>
+          <li><span onclick="jumpTo('products')">Products</span></li>
+          <li><span onclick="openCart()">Shop Now</span></li>
+          <li><span onclick="openTracking()">Track My Order</span></li>
+          <li><span onclick="jumpTo('why')">About Us</span></li>
+          <li><span onclick="jumpTo('contact')">Contact</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fct">Our Products</div>
+        <ul class="fl">
+          <li><span onclick="jumpTo('products')">పసుపు — Pasupu</span></li>
+          <li><span onclick="jumpTo('products')">కుంకుమ — Kumkum</span></li>
+          <li><span onclick="jumpTo('products')">గంధం — Gandham</span></li>
+          <li><span onclick="jumpTo('products')">విభూతి — Vibhuti</span></li>
+          <li><span onclick="jumpTo('products')">యజ్ఞోపవీతం</span></li>
+          <li><span onclick="jumpTo('products')">Combo Kits</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="fct">Information</div>
+        <ul class="fl">
+          <li><span onclick="openTracking()">Track Shipment</span></li>
+          <li><span>Shipping Policy</span></li>
+          <li><span>Return &amp; Refund</span></li>
+          <li><span>Privacy Policy</span></li>
+          <li><span>Terms of Service</span></li>
+          <li><span onclick="window.open('https://wa.me/919849787168?text=Namaste!%20I%20would%20like%20to%20place%20a%20bulk%20order.','_blank')">Bulk Orders</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Guru Padukam. Made with 🙏 in Hyderabad, India. Powered by Shiprocket.</span>
+      <div class="fpay"><span class="fpb">UPI</span><span class="fpb">GPay</span><span class="fpb">PhonePe</span><span class="fpb">Paytm</span><span class="fpb">COD</span><span class="fpb">Net Banking</span></div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/919849787168?text=Namaste%20Guru%20Padukam!%20%F0%9F%99%8F%20I%20have%20a%20query." class="float-wa" target="_blank" aria-label="Chat on WhatsApp" rel="noopener">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"/>
+  </a>
+
+</div><!-- end #mainsite -->
+
+<!-- ===== QUICK VIEW MODAL ===== -->
+<div class="mback" id="qv-modal" onclick="if(event.target===this)closeQV()">
+  <div class="modal">
+    <div class="mimgw"><img id="qv-img" src="" alt=""/></div>
+    <div class="mbody">
+      <button class="mcls" onclick="closeQV()">✕</button>
+      <div class="mn" id="qv-name"></div>
+      <div class="mnte" id="qv-namete"></div>
+      <div class="pstars" style="margin:.6rem 0"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+      <div class="mp" id="qv-price"></div>
+      <p class="mdesc" id="qv-desc"></p>
+      <span class="mlbl">Quantity</span>
+      <div class="qrow">
+        <button class="qb" onclick="qvQty(-1)">−</button>
+        <input class="qv" type="number" value="1" min="1" id="qv-qty"/>
+        <button class="qb" onclick="qvQty(1)">+</button>
+      </div>
+      <button class="madd" id="qv-add-btn">Add to Cart →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== CART PANEL ===== -->
+<div class="cart-backdrop" id="cart-backdrop" onclick="closeCart()"></div>
+<div class="cart-panel" id="cart-panel">
+  <div class="cart-hdr">
+    <h2>🛒 Your Cart</h2>
+    <button class="cart-cls" onclick="closeCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cart-body"></div>
+  <div class="cart-ftr" id="cart-ftr">
+    <div class="cart-total-row">
+      <span class="cart-total-lbl">Subtotal</span>
+      <span class="cart-total-amt" id="cart-total">₹0</span>
+    </div>
+    <p style="font-size:.74rem;color:var(--text-md);margin-bottom:.9rem;font-style:italic">
+      🚚 Free delivery on orders above ₹499 · Shiprocket powered
+    </p>
+    <button class="btn-checkout" onclick="openCheckout()">Secure Checkout →</button>
+    <button class="btn-wa-order" onclick="waOrder()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+      Order via WhatsApp
+    </button>
+    <div class="cart-secure">🔒 Secure checkout · 256-bit encrypted</div>
+  </div>
+</div>
+
+<!-- ===== CHECKOUT OVERLAY ===== -->
+<div class="chk-overlay" id="chk-overlay" onclick="if(event.target===this)closeCheckout()">
+  <div class="chk-box">
+    <div class="chk-hdr">
+      <h2>🙏 Secure Checkout — Guru Padukam</h2>
+      <button class="chk-cls" onclick="closeCheckout()">✕</button>
+    </div>
+
+    <!-- Steps -->
+    <div class="chk-steps">
+      <div class="chk-step active" id="step-ind-1">
+        <div class="step-num">1</div><span>Details</span>
+      </div>
+      <div class="step-sep"></div>
+      <div class="chk-step" id="step-ind-2">
+        <div class="step-num">2</div><span>Payment</span>
+      </div>
+      <div class="step-sep"></div>
+      <div class="chk-step" id="step-ind-3">
+        <div class="step-num">3</div><span>Confirmed</span>
+      </div>
+    </div>
+
+    <!-- Step 1: Shipping Details -->
+    <div class="chk-panel active" id="chk-panel-1">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem" id="chk-inner-grid">
+        <div>
+          <h3 style="font-family:'Cinzel',serif;color:var(--maroon);margin-bottom:1.5rem;font-size:1rem;letter-spacing:.08em">Shipping Information</h3>
+          <div class="chk-form-grid" id="chk-form-grid">
+            <div class="chk-inp-wrap">
+              <label class="chk-lbl">Full Name *</label>
+              <input class="chk-inp" id="chk-fname" placeholder="Rama Sharma" type="text" autocomplete="name"/>
+              <span class="chk-inp-err" id="err-fname"></span>
+            </div>
+            <div class="chk-inp-wrap">
+              <label class="chk-lbl">Phone Number *</label>
+              <input class="chk-inp" id="chk-phone" placeholder="9876543210" type="tel" autocomplete="tel" maxlength="10"/>
+              <span class="chk-inp-err" id="err-phone"></span>
+            </div>
+            <div class="chk-inp-wrap chk-form-full">
+              <label class="chk-lbl">Email (for order updates)</label>
+              <input class="chk-inp" id="chk-email" placeholder="your@email.com" type="email" autocomplete="email"/>
+            </div>
+            <div class="chk-inp-wrap chk-form-full">
+              <label class="chk-lbl">Street Address *</label>
+              <input class="chk-inp" id="chk-street" placeholder="Flat 4, Srinivas Apartments, Road No. 5" type="text" autocomplete="street-address"/>
+              <span class="chk-inp-err" id="err-street"></span>
+            </div>
+            <div class="chk-inp-wrap">
+              <label class="chk-lbl">City *</label>
+              <input class="chk-inp" id="chk-city" placeholder="Hyderabad" type="text" autocomplete="address-level2"/>
+              <span class="chk-inp-err" id="err-city"></span>
+            </div>
+            <div class="chk-inp-wrap">
+              <label class="chk-lbl">State *</label>
+              <input class="chk-inp" id="chk-state" placeholder="Telangana" type="text" autocomplete="address-level1"/>
+            </div>
+            <div class="chk-inp-wrap">
+              <label class="chk-lbl">PIN Code *</label>
+              <input class="chk-inp" id="chk-pin" placeholder="500090" type="text" maxlength="6"/>
+              <span class="chk-inp-err" id="err-pin"></span>
+            </div>
+            <div class="chk-inp-wrap">
+              <label class="chk-lbl">Payment Method</label>
+              <select class="chk-inp" id="chk-paymethod">
+                <option value="upi">UPI / QR Code</option>
+                <option value="cod">Cash on Delivery</option>
+              </select>
+            </div>
+          </div>
+          <div class="chk-trust-row">
+            <div class="chk-trust-item">🔒 256-bit SSL</div>
+            <div class="chk-trust-item">🛡️ 100% Secure</div>
+            <div class="chk-trust-item">📱 UPI Supported</div>
+          </div>
+          <button class="btn-chk-next" onclick="proceedToPayment()">Proceed to Payment →</button>
+        </div>
+        <div>
+          <div class="chk-order-summary">
+            <div class="chk-sum-title">Order Summary</div>
+            <div id="chk-sum-items"></div>
+            <div class="chk-sum-total">
+              <span>Total Amount</span>
+              <span id="chk-sum-total">₹0</span>
+            </div>
+            <div style="margin-top:.8rem;font-size:.78rem;color:var(--text-md);font-style:italic;line-height:1.6">
+              🚚 Shiprocket powered delivery. Tracking link sent to your WhatsApp after dispatch.
+              <br>📦 Estimated delivery: 3–5 business days.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: UPI QR Payment -->
+    <div class="chk-panel" id="chk-panel-2">
+      <div class="qr-wrap">
+        <div class="qr-box">
+          <h3 style="font-family:'Cinzel',serif;color:var(--maroon);font-size:.9rem;letter-spacing:.1em;margin-bottom:.5rem">SCAN &amp; PAY</h3>
+          <div class="qr-amount-badge" id="qr-amount-badge">₹0</div>
+          <div class="qr-canvas-wrap">
+            <div id="qr-canvas"></div>
+          </div>
+          <div style="font-family:'Cinzel',serif;font-size:.65rem;letter-spacing:.1em;color:var(--text-md);margin:.5rem 0 .3rem">UPI ID</div>
+          <div class="qr-upi-id" id="qr-upi-display">9494446479@ptyes</div>
+          <div class="qr-apps">
+            <span class="qr-app">GPay</span>
+            <span class="qr-app">PhonePe</span>
+            <span class="qr-app">Paytm</span>
+            <span class="qr-app">BHIM</span>
+            <span class="qr-app">Any UPI</span>
+          </div>
+          <button class="qr-paid-btn" onclick="confirmPayment()">✅ I Have Paid — Confirm Order</button>
+          <div class="qr-timer" id="qr-timer">Pay within this session to secure your order</div>
+          <button onclick="goToStep(1)" style="width:100%;margin-top:.8rem;background:none;border:1px solid rgba(201,148,58,.25);font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-md);padding:.7rem;cursor:pointer">← Back to Details</button>
+        </div>
+        <div>
+          <div class="qr-instructions">
+            <h4>How to Pay via UPI QR</h4>
+            <div class="qr-step"><div class="qr-step-num">1</div><div class="qr-step-txt">Open <strong>GPay, PhonePe, Paytm</strong> or any UPI app on your phone</div></div>
+            <div class="qr-step"><div class="qr-step-num">2</div><div class="qr-step-txt">Tap <strong>"Scan QR"</strong> or "Scan &amp; Pay" and scan the code on the left</div></div>
+            <div class="qr-step"><div class="qr-step-num">3</div><div class="qr-step-txt">Verify amount: <strong id="qr-step3-amount">₹0</strong> for <em>Guru Padukam</em></div></div>
+            <div class="qr-step"><div class="qr-step-num">4</div><div class="qr-step-txt">Enter your UPI PIN and <strong>complete the payment</strong></div></div>
+            <div class="qr-step"><div class="qr-step-num">5</div><div class="qr-step-txt">After payment, click <strong>"I Have Paid"</strong> button to confirm your order</div></div>
+          </div>
+          <div style="background:var(--maroon-dk);padding:1.2rem;margin-top:1rem;border-left:3px solid var(--gold)">
+            <div style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem">🔒 Payment Security</div>
+            <p style="font-size:.82rem;color:rgba(253,246,227,.7);line-height:1.6">All UPI transactions are end-to-end encrypted by your bank and the NPCI network. We never store your payment credentials.</p>
+          </div>
+          <div style="margin-top:1rem;background:var(--ivory);border:1px solid rgba(201,148,58,.2);padding:1rem">
+            <div style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--maroon);margin-bottom:.5rem">Prefer COD?</div>
+            <p style="font-size:.82rem;color:var(--text-md);line-height:1.6;margin-bottom:.7rem">Cash on Delivery available on orders above ₹250 across India.</p>
+            <button onclick="confirmCOD()" style="font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;padding:.6rem 1.2rem;background:var(--maroon);color:var(--gold-pale);border:none;cursor:pointer">Place COD Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3: Confirmation -->
+    <div class="chk-panel" id="chk-panel-3">
+      <div class="conf-wrap">
+        <div class="conf-ico">🙏</div>
+        <div class="conf-title">Order Placed!</div>
+        <div class="conf-sub">మీ ఆర్డర్ విజయవంతంగా ఉంచబడింది</div>
+        <div class="conf-oid" id="conf-oid">Order ID: GP-XXXXXX</div>
+        <p class="conf-detail">
+          Thank you for choosing Guru Padukam. Your sacred items will be packed with prayer and dispatched within 24 hours via <strong>Shiprocket</strong>. A WhatsApp message with your tracking details will be sent shortly.
+        </p>
+        <div class="conf-actions">
+          <button class="btn-conf-wa" id="conf-wa-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+            Send Order to WhatsApp
+          </button>
+          <button class="btn-conf-track" onclick="closeCheckout();openTracking()">📦 Track My Order</button>
+          <button onclick="closeCheckout();jumpTo('products')" style="font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;padding:.82rem 2rem;background:transparent;color:var(--maroon);border:1px solid var(--maroon);cursor:pointer">Shop More</button>
+        </div>
+        <div class="conf-delivery">
+          📦 Estimated Delivery: 3–5 Business Days<br>
+          🚚 Carrier: Shiprocket Express<br>
+          📱 Tracking AWB will be sent via WhatsApp
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TRACKING OVERLAY ===== -->
+<div class="trk-overlay" id="trk-overlay" onclick="if(event.target===this)closeTracking()">
+  <div class="trk-box">
+    <div class="trk-hdr">
+      <h2>📦 Track Your Shipment</h2>
+      <button class="cart-cls" onclick="closeTracking()">✕</button>
+    </div>
+    <div class="trk-body">
+      <div style="font-family:'EB Garamond',serif;font-style:italic;color:var(--text-md);margin-bottom:1.2rem;font-size:.95rem">
+        Enter your <strong>Order ID</strong> (e.g. GP-123456) or <strong>Shiprocket AWB</strong> number to see live tracking status.
+      </div>
+      <div class="trk-search-row">
+        <input class="trk-inp" id="trk-inp" placeholder="e.g. GP-123456 or AWB Number" type="text" onkeydown="if(event.key==='Enter')trackOrder()"/>
+        <button class="btn-trk" onclick="trackOrder()">Track →</button>
+      </div>
+
+      <div class="trk-result" id="trk-result">
+        <div class="trk-order-head">
+          <div><div class="trk-oid" id="trk-oid"></div><div class="trk-date" id="trk-date"></div></div>
+          <div style="text-align:right"><div style="font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-md)">Status</div><div style="font-family:'Cinzel',serif;font-size:1rem;color:var(--maroon);font-weight:700" id="trk-status"></div></div>
+        </div>
+
+        <!-- Stepper -->
+        <div class="trk-stepper">
+          <div class="trk-stp" id="trk-stp-1"><div class="trk-stp-ico">📦</div><div class="trk-stp-lbl">Order Placed</div></div>
+          <div class="trk-line" id="trk-line-1"></div>
+          <div class="trk-stp" id="trk-stp-2"><div class="trk-stp-ico">🏭</div><div class="trk-stp-lbl">Processing</div></div>
+          <div class="trk-line" id="trk-line-2"></div>
+          <div class="trk-stp" id="trk-stp-3"><div class="trk-stp-ico">🚚</div><div class="trk-stp-lbl">Shipped</div></div>
+          <div class="trk-line" id="trk-line-3"></div>
+          <div class="trk-stp" id="trk-stp-4"><div class="trk-stp-ico">✅</div><div class="trk-stp-lbl">Delivered</div></div>
+        </div>
+
+        <div class="trk-details">
+          <div class="trk-detail-grid">
+            <div><div class="trk-detail-lbl">Shipping To</div><div class="trk-detail-val" id="trk-addr"></div></div>
+            <div><div class="trk-detail-lbl">Order Total</div><div class="trk-detail-val" id="trk-amt"></div></div>
+            <div><div class="trk-detail-lbl">AWB / Tracking No.</div><div class="trk-detail-val" id="trk-awb-val">Will be updated after dispatch</div></div>
+            <div><div class="trk-detail-lbl">Carrier</div><div class="trk-detail-val">Shiprocket Express</div></div>
+          </div>
+          <div id="trk-sr-link-wrap" style="margin-top:1rem;display:none">
+            <a class="trk-awb-link" id="trk-sr-link" target="_blank" rel="noopener">
+              🔗 Track on Shiprocket Portal →
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="trk-not-found" id="trk-not-found" style="display:none">
+        <div style="font-size:2.5rem;margin-bottom:.8rem">🔍</div>
+        <div style="font-family:'Cinzel',serif;font-size:.9rem;color:var(--maroon);margin-bottom:.5rem">Order Not Found</div>
+        <p style="font-size:.85rem;line-height:1.6">No order found with that ID. Please check your Order ID from the confirmation message, or <a href="https://wa.me/919849787168?text=Please help me track my order" target="_blank" style="color:var(--gold);text-decoration:underline" rel="noopener">contact us on WhatsApp</a> for assistance.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+/* ===== CONFIG ===== */
+const CFG = {
+  launchDate: new Date('2026-05-12T11:11:11+05:30'),  // Today — 12 May 2026 11:11:11 IST
+  upiId: '9494446479@ptyes',
+  businessName: 'Guru Padukam',
+  whatsapp: '919849787168',
+  phone: '+91 98497 87168',
+};
+
+/* ===== PRODUCTS DATA ===== */
+const PRODUCTS = [
+  {id:'p1',name:'Organic Pasupu',nameTe:'పసుపు',price:149,orig:199,off:'25% off',badge:'Organic',badgeClass:'borg',cat:'powder',
+   img:'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=600,fit=crop/tNrOkFJHrQGKzMyG/gemini_generated_image_az55qzaz55qzaz55-1-qoE2sOBnb4lPbbYH.png',
+   tag:'Pure Stone-Ground Turmeric',eco:'🌿 100% Chemical-Free',
+   desc:'Pure organic turmeric powder, hand-ground using traditional stone grinding. No artificial colour or chemicals. Ideal for daily puja, tilak & haldi ceremonies. Available in 50g, 100g & 250g packs.'},
+  {id:'p2',name:'Organic Kumkum',nameTe:'కుంకుమ',price:129,orig:169,off:'24% off',badge:'New Batch',badgeClass:'bnew',cat:'powder',
+   img:'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=600,fit=crop/tNrOkFJHrQGKzMyG/untitled-SK4UYSC4sReRxpcn.png',
+   tag:'Natural Red Kumkum Powder',eco:'🌿 No Synthetic Dyes',
+   desc:'Traditional red kumkum made from pure turmeric & lime, processed without synthetic dyes. Vibrant natural colour, blessed for auspiciousness. Used in all Hindu rituals, festivals & temple worship.'},
+  {id:'p3',name:'Gandham (Chandanam)',nameTe:'గంధం / చందనం',price:249,orig:320,off:'22% off',badge:'Limited Stock',badgeClass:'blim',cat:'powder',
+   img:'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=600,fit=crop/tNrOkFJHrQGKzMyG/untitled-1-TUTGlNXT3cCVQ1l3.png',
+   tag:'Pure Mysore Sandalwood',eco:'🌿 Pure Sandalwood',
+   desc:'Pure sandalwood paste & powder for deity abhishekam and tilak. Rich authentic fragrance, cool on skin — prepared from genuine Mysore sandalwood without fillers or artificial fragrance.'},
+  {id:'p4',name:'Sacred Vibhuti',nameTe:'విభూతి (భస్మం)',price:99,orig:129,off:'23% off',badge:'Organic',badgeClass:'borg',cat:'powder',
+   img:'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=600,fit=crop/tNrOkFJHrQGKzMyG/adobe-express---file-NZhQM6x7At5Ugsy6.png',
+   tag:'Pure Cow-Dung Ash, Traditionally Made',eco:'🌿 Gomata Blessed',
+   desc:'Sacred vibhuti (holy ash) prepared by burning dried cow dung with specific herbs in a traditional homa fire. Pure white, fine texture — blessed for Shiva devotees & daily aarti.'},
+  {id:'p5',name:'Yagnopavitam',nameTe:'యజ్ఞోపవీతం (జంధ్యాలు)',price:199,orig:259,off:'23% off',badge:'New Arrival',badgeClass:'bnew',cat:'thread',
+   img:'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=656,fit=crop/tNrOkFJHrQGKzMyG/whatsapp-image-2026-03-21-at-1.53.16-pm-qoX3irLG4E6YGnPU.jpeg',
+   tag:'Handspun Cotton Sacred Thread',eco:'🧵 Handspun Cotton',
+   desc:'Handspun cotton sacred thread (janeu) made the traditional way with 9 strands. Suitable for Upanayanam ceremonies, Brahmin daily sandhyavandanam & rituals. Available in singles and bulk packs.'},
+  {id:'p6',name:'Complete Puja Combo Kit',nameTe:'పూజా కిట్ (5-in-1)',price:599,orig:825,off:'Save ₹226',badge:'Best Value',badgeClass:'bsale',cat:'combo',
+   img:'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=600,h=500,fit=crop/tNrOkFJHrQGKzMyG/chatgpt-image-mar-24-2026-10_27_29-pm-uy3PQQ9sZQ3cAUb8.png',
+   tag:'All 5 Products — Gift Ready',eco:'🎁 Gift Box Included',
+   desc:'All 5 sacred products: Pasupu, Kumkum, Gandham, Vibhuti & Yagnopavitam — beautifully packed in a traditional gift box. Perfect for festivals, Guru Purnima, housewarming & gifting.'},
+];
+
+/* ===== LAUNCH GATE ===== */
+function checkLaunchGate(){
+  const params = new URLSearchParams(window.location.search);
+  const bypass = params.get('preview')==='1' || params.get('admin')==='1';
+  if(bypass || Date.now() >= CFG.launchDate.getTime()){
+    showMainSite();
+  } else {
+    showPrelaunch();
+  }
+}
+
+function showPrelaunch(){
+  document.getElementById('prelaunch').style.display='block';
+  document.getElementById('mainsite').style.display='none';
+  startPLCountdown();
+  startGlobalDiyasCount();
+}
+
+function showMainSite(){
+  document.getElementById('prelaunch').style.display='none';
+  document.getElementById('mainsite').style.display='block';
+  initMainSite();
+}
+
+function enterSite(){ showMainSite(); }
+
+/* ===== PRE-LAUNCH COUNTDOWN ===== */
+function startPLCountdown(){
+  function update(){
+    const diff = CFG.launchDate.getTime() - Date.now();
+    if(diff<=0){ showMainSite(); return; }
+    const days = Math.floor(diff/864e5);
+    const hours = Math.floor((diff%864e5)/36e5);
+    const mins = Math.floor((diff%36e5)/6e4);
+    const secs = Math.floor((diff%6e4)/1e3);
+    const p = n=>String(n).padStart(2,'0');
+    document.getElementById('pl-d').textContent=p(days);
+    document.getElementById('pl-h').textContent=p(hours);
+    document.getElementById('pl-m').textContent=p(mins);
+    document.getElementById('pl-s').textContent=p(secs);
+  }
+  update(); setInterval(update,1000);
+}
+
+let plGlobalCount = 108 + Math.floor(Math.random()*42);
+function startGlobalDiyasCount(){
+  setInterval(()=>{
+    if(Math.random()<.12){
+      plGlobalCount++;
+      const el=document.getElementById('pl-global');
+      if(el) el.textContent=plGlobalCount.toLocaleString();
+    }
+  },4000);
+  const el=document.getElementById('pl-global');
+  if(el) el.textContent=plGlobalCount.toLocaleString();
+}
+
+/* ===== DIYA INTERACTION ===== */
+function lightDiya(el, e){
+  if(!el.classList.contains('lit')){
+    el.classList.add('lit');
+    plGlobalCount++;
+    const glb=document.getElementById('pl-global');
+    if(glb) glb.textContent=plGlobalCount.toLocaleString();
+    document.getElementById('pl-title').classList.add('lit-glow');
+    document.getElementById('pl-tagline').textContent='The light of purity awakens. 🙏';
+  }
+  spawnSparks(e, el);
+}
+
+function spawnSparks(e, container){
+  const rect=container.getBoundingClientRect();
+  const cx=e.clientX-rect.left, cy=e.clientY-rect.top;
+  const wrap=document.getElementById('pl-sparks');
+  for(let i=0;i<8;i++){
+    const sp=document.createElement('div');
+    sp.className='spark';
+    const angle=Math.random()*Math.PI*2;
+    const dist=30+Math.random()*60;
+    sp.style.cssText=`left:${rect.left+cx+window.scrollX}px;top:${rect.top+cy+window.scrollY}px;--sx:${Math.cos(angle)*dist}px;--sy:${Math.sin(angle)*dist-80}px;animation-delay:${Math.random()*0.15}s`;
+    wrap.appendChild(sp);
+    setTimeout(()=>sp.remove(),1500);
+  }
+}
+
+/* ===== MAIN SITE INIT ===== */
+function initMainSite(){
+  try{
+    initReveal();      // MUST be first: renderProducts() calls revObs.observe()
+    renderProducts();
+    updateCartUI();
+    initSlider();
+    initDailyCountdown();
+    initFilters();
+    const hamBtn=document.getElementById('hamBtn');
+    if(hamBtn) hamBtn.addEventListener('click',()=>document.getElementById('mobnav').classList.add('open'));
+    const mobcls=document.getElementById('mobcls');
+    if(mobcls) mobcls.addEventListener('click',closeMobNav);
+    document.addEventListener('keydown',e=>{
+      if(e.key==='Escape'){closeQV();closeCart();closeCheckout();closeTracking();}
+    });
+    // Force-reveal elements visible in the initial viewport after layout is painted
+    requestAnimationFrame(()=>requestAnimationFrame(()=>{
+      document.querySelectorAll('.rev').forEach(el=>{
+        const r=el.getBoundingClientRect();
+        if(r.top < window.innerHeight+200) el.classList.add('vis');
+      });
+    }));
+  }catch(err){ console.error('[GP] initMainSite failed:',err); }
+}
+
+/* ===== RENDER PRODUCTS ===== */
+function renderProducts(){
+  const grid=document.getElementById('pgrid');
+  grid.innerHTML=PRODUCTS.map((p,i)=>`
+    <div class="pc rev d${(i%5)+1}" data-cat="${p.cat}">
+      <div class="pbadge ${p.badgeClass}">${p.badge==='Organic'?'✓ '+p.badge:p.badge}</div>
+      <div class="pimg"><img src="${p.img}" alt="${p.name}" loading="lazy"/></div>
+      <div class="pa">
+        <button class="qvb" onclick="openQV(PRODUCTS[${i}])">Quick View</button>
+        <button class="acb" onclick="addToCart('${p.id}','${p.name}',${p.price},1,'${p.img}')">Add to Cart</button>
+      </div>
+      <div class="pinfo">
+        <div class="pn">${p.name}</div>
+        <div class="pnte">${p.nameTe}</div>
+        <div class="ptag">${p.tag}</div>
+        <div class="ppr"><span class="pprice">₹${p.price}</span><span class="porig">₹${p.orig}</span><span class="poff">${p.off}</span></div>
+        <div class="pstars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+        <div class="porg">${p.eco}</div>
+      </div>
+    </div>`).join('');
+  // Re-run reveal
+  document.querySelectorAll('#pgrid .rev').forEach(el=>{ if(revObs) revObs.observe(el); });
+}
+
+/* ===== CART ===== */
+let cart = [];
+
+function loadCart(){
+  try{
+    const raw=localStorage.getItem('gp_cart_v2');
+    if(!raw) return;
+    cart=JSON.parse(atob(raw))||[];
+  }catch(e){ cart=[]; }
+}
+
+function saveCart(){
+  try{ localStorage.setItem('gp_cart_v2',btoa(JSON.stringify(cart))); }catch(e){}
+}
+
+function addToCart(id, name, price, qty, img){
+  qty=parseInt(qty)||1;
+  const found=cart.find(i=>i.id===id);
+  if(found){ found.qty+=qty; }
+  else{ cart.push({id,name,price:parseInt(price),qty,img:img||''}); }
+  saveCart(); updateCartUI();
+  showToast(`"${name}" added to cart 🙏`);
+}
+
+function removeFromCart(id){
+  cart=cart.filter(i=>i.id!==id);
+  saveCart(); updateCartUI();
+}
+
+function updateQty(id, delta){
+  const item=cart.find(i=>i.id===id);
+  if(!item) return;
+  item.qty+=delta;
+  if(item.qty<=0) removeFromCart(id);
+  else{ saveCart(); updateCartUI(); }
+}
+
+function cartTotal(){ return cart.reduce((s,i)=>s+i.price*i.qty,0); }
+function cartCount(){ return cart.reduce((s,i)=>s+i.qty,0); }
+
+function updateCartUI(){
+  const count=cartCount(), total=cartTotal();
+  document.getElementById('cart-count').textContent=count;
+
+  const body=document.getElementById('cart-body');
+  if(cart.length===0){
+    body.innerHTML=`<div class="cart-empty"><div class="ce-ico">🛒</div><p>Your cart is empty.<br>Add some sacred items to begin.</p></div>`;
+  } else {
+    body.innerHTML=cart.map(item=>`
+      <div class="cart-item">
+        <img class="cart-item-img" src="${item.img||''}" alt="${item.name}" onerror="this.style.display='none'"/>
+        <div class="cart-item-info">
+          <div class="cart-item-name">${item.name}</div>
+          <div class="cart-item-price">₹${item.price} × ${item.qty} = <strong>₹${item.price*item.qty}</strong></div>
+          <div class="cart-item-qty">
+            <button class="cqb" onclick="updateQty('${item.id}',-1)">−</button>
+            <span class="cqv">${item.qty}</span>
+            <button class="cqb" onclick="updateQty('${item.id}',1)">+</button>
+          </div>
+        </div>
+        <button class="cart-del" onclick="removeFromCart('${item.id}')" aria-label="Remove">✕</button>
+      </div>`).join('');
+  }
+  document.getElementById('cart-total').textContent=`₹${total}`;
+}
+
+function openCart(){
+  document.getElementById('cart-panel').classList.add('open');
+  document.getElementById('cart-backdrop').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeCart(){
+  document.getElementById('cart-panel').classList.remove('open');
+  document.getElementById('cart-backdrop').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function waOrder(){
+  if(cart.length===0){showToast('Your cart is empty!');return;}
+  let msg=`Namaste Guru Padukam! 🙏\n\nI would like to order:\n\n`;
+  cart.forEach(i=>{ msg+=`• ${i.name} (Qty: ${i.qty}) — ₹${i.price*i.qty}\n`; });
+  msg+=`\nTotal: ₹${cartTotal()}\n\nPlease confirm my order. 🙏`;
+  window.open(`https://wa.me/${CFG.whatsapp}?text=${encodeURIComponent(msg)}`,'_blank','noopener');
+}
+
+/* ===== QUICK VIEW ===== */
+let qvProduct=null;
+function openQV(p){
+  qvProduct=p;
+  document.getElementById('qv-img').src=p.img||'';
+  document.getElementById('qv-name').textContent=p.name||'';
+  document.getElementById('qv-namete').textContent=p.nameTe||'';
+  document.getElementById('qv-price').textContent=`₹${p.price}`;
+  document.getElementById('qv-desc').textContent=p.desc||'';
+  document.getElementById('qv-qty').value=1;
+  document.getElementById('qv-add-btn').onclick=()=>{
+    const qty=parseInt(document.getElementById('qv-qty').value)||1;
+    addToCart(p.id,p.name,p.price,qty,p.img);
+    closeQV(); openCart();
+  };
+  document.getElementById('qv-modal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeQV(){
+  document.getElementById('qv-modal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function qvQty(d){
+  const i=document.getElementById('qv-qty');
+  i.value=Math.max(1,parseInt(i.value||1)+d);
+}
+
+/* ===== CHECKOUT ===== */
+let currentOrderId=null, checkoutStep=1;
+
+function openCheckout(){
+  if(cart.length===0){showToast('Your cart is empty!');return;}
+  closeCart();
+  renderCheckoutSummary();
+  goToStep(1);
+  document.getElementById('chk-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeCheckout(){
+  document.getElementById('chk-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function renderCheckoutSummary(){
+  const el=document.getElementById('chk-sum-items');
+  el.innerHTML=cart.map(i=>`
+    <div class="chk-sum-item">
+      <span>${i.name} × ${i.qty}</span>
+      <span>₹${i.price*i.qty}</span>
+    </div>`).join('');
+  const total=cartTotal();
+  const freeShip=total>=499?'🚚 FREE Shipping':'🚚 Shipping: ₹49';
+  document.getElementById('chk-sum-total').textContent=`₹${total}`;
+  // Remove old shipping note if exists
+  const oldShip=document.getElementById('chk-ship-note');
+  if(oldShip) oldShip.remove();
+  const shipNote=document.createElement('div');
+  shipNote.id='chk-ship-note';
+  shipNote.style.cssText='font-size:.78rem;color:var(--green);margin-top:.4rem';
+  shipNote.textContent=freeShip;
+  document.getElementById('chk-sum-total').insertAdjacentElement('afterend',shipNote);
+}
+
+function goToStep(n){
+  checkoutStep=n;
+  [1,2,3].forEach(s=>{
+    const panel=document.getElementById(`chk-panel-${s}`);
+    const ind=document.getElementById(`step-ind-${s}`);
+    panel.classList.toggle('active',s===n);
+    ind.classList.remove('active','done');
+    if(s<n) ind.classList.add('done');
+    if(s===n) ind.classList.add('active');
+  });
+}
+
+function sanitize(str){
+  return String(str||'').replace(/[<>"'&]/g,'').trim();
+}
+
+function proceedToPayment(){
+  // Validate
+  let ok=true;
+  const fields=[
+    {id:'chk-fname',errId:'err-fname',min:2,msg:'Please enter your full name'},
+    {id:'chk-phone',errId:'err-phone',pattern:/^\d{10}$/,msg:'Enter valid 10-digit phone number'},
+    {id:'chk-street',errId:'err-street',min:5,msg:'Please enter your street address'},
+    {id:'chk-city',errId:'err-city',min:2,msg:'Please enter city name'},
+    {id:'chk-pin',errId:'err-pin',pattern:/^\d{6}$/,msg:'Enter valid 6-digit PIN code'},
+  ];
+  fields.forEach(f=>{
+    const inp=document.getElementById(f.id);
+    const err=document.getElementById(f.errId);
+    const val=sanitize(inp.value);
+    let valid=true;
+    if(f.pattern && !f.pattern.test(val)) valid=false;
+    if(f.min && val.length<f.min) valid=false;
+    if(!valid){
+      inp.classList.add('error');
+      if(err) err.textContent=f.msg;
+      ok=false;
+    } else {
+      inp.classList.remove('error');
+      if(err) err.textContent='';
+    }
+  });
+  if(!ok){ showToast('Please fill all required fields correctly'); return; }
+
+  const method=document.getElementById('chk-paymethod').value;
+  if(method==='cod'){
+    confirmCOD(); return;
+  }
+  // Generate QR
+  generateUPIQR();
+  goToStep(2);
+}
+
+function generateUPIQR(){
+  const total=cartTotal();
+  currentOrderId='GP-'+Math.floor(100000+Math.random()*900000);
+  const upiStr=`upi://pay?pa=${encodeURIComponent(CFG.upiId)}&pn=${encodeURIComponent(CFG.businessName)}&am=${total}&cu=INR&tn=${encodeURIComponent('Order '+currentOrderId)}`;
+
+  document.getElementById('qr-amount-badge').textContent=`₹${total}`;
+  document.getElementById('qr-step3-amount').textContent=`₹${total}`;
+  document.getElementById('qr-upi-display').textContent=CFG.upiId;
+
+  const qrWrap=document.getElementById('qr-canvas');
+  qrWrap.innerHTML='';
+  try{
+    if(typeof QRCode!=='undefined'){
+      new QRCode(qrWrap,{text:upiStr,width:220,height:220,colorDark:'#380311',colorLight:'#FDF6E3',correctLevel:QRCode.CorrectLevel.M});
+    } else {
+      // Fallback: text display
+      qrWrap.innerHTML=`<div style="width:220px;height:220px;display:flex;align-items:center;justify-content:center;background:var(--ivory);border:2px dashed var(--gold);padding:1rem;text-align:center;font-family:'Cinzel',serif;font-size:.7rem;color:var(--maroon)">UPI QR Code<br><small style="margin-top:.5rem;display:block;word-break:break-all;font-size:.55rem;color:var(--text-md)">${upiStr}</small></div>`;
+    }
+  }catch(e){
+    qrWrap.innerHTML=`<div style="width:220px;height:220px;display:flex;align-items:center;justify-content:center;background:var(--ivory);border:1px solid var(--gold);font-family:'Cinzel',serif;font-size:.72rem;color:var(--maroon);padding:1rem;text-align:center">Scan QR in<br>UPI App<br>or pay to:<br>${CFG.upiId}</div>`;
+  }
+}
+
+function confirmPayment(){
+  placeOrder('UPI/QR Payment');
+}
+
+function confirmCOD(){
+  currentOrderId='GP-'+Math.floor(100000+Math.random()*900000);
+  placeOrder('Cash on Delivery');
+}
+
+function placeOrder(paymentMethod){
+  if(!currentOrderId) currentOrderId='GP-'+Math.floor(100000+Math.random()*900000);
+  const total=cartTotal();
+  const name=sanitize(document.getElementById('chk-fname').value);
+  const phone=sanitize(document.getElementById('chk-phone').value);
+  const street=sanitize(document.getElementById('chk-street').value);
+  const city=sanitize(document.getElementById('chk-city').value);
+  const state=sanitize(document.getElementById('chk-state').value||'');
+  const pin=sanitize(document.getElementById('chk-pin').value);
+
+  // Save order to localStorage
+  const order={
+    id:currentOrderId,
+    date:new Date().toISOString(),
+    items:[...cart],
+    total,
+    paymentMethod,
+    address:{fullName:name,phone,street,city,state,zip:pin},
+    status:'Processing',
+    trackingId:null,
+  };
+  saveOrder(order);
+
+  // Build WhatsApp msg
+  let waMsg=`Namaste Guru Padukam! 🙏\n\n*New Order: ${currentOrderId}*\n\n`;
+  waMsg+=`*Items Ordered:*\n`;
+  cart.forEach(i=>{ waMsg+=`• ${i.name} × ${i.qty} = ₹${i.price*i.qty}\n`; });
+  waMsg+=`\n*Total: ₹${total}*\n*Payment: ${paymentMethod}*\n`;
+  waMsg+=`\n*Shipping to:*\n${name}\n${street}, ${city}, ${state} - ${pin}\nPhone: ${phone}`;
+
+  // Update confirmation
+  document.getElementById('conf-oid').textContent=`Order ID: ${currentOrderId}`;
+  document.getElementById('conf-wa-btn').onclick=()=>{
+    window.open(`https://wa.me/${CFG.whatsapp}?text=${encodeURIComponent(waMsg)}`,'_blank','noopener');
+  };
+
+  // Clear cart
+  cart=[];
+  saveCart(); updateCartUI();
+
+  goToStep(3);
+  showToast('Order placed! 🙏 Thank you!');
+}
+
+/* ===== ORDER STORAGE ===== */
+function saveOrder(order){
+  try{
+    const raw=localStorage.getItem('gp_orders_v2');
+    const orders=raw?JSON.parse(atob(raw)):[];
+    orders.unshift(order);
+    localStorage.setItem('gp_orders_v2',btoa(JSON.stringify(orders.slice(0,50))));
+  }catch(e){}
+}
+
+function getOrders(){
+  try{
+    const raw=localStorage.getItem('gp_orders_v2');
+    return raw?JSON.parse(atob(raw)):[];
+  }catch(e){ return []; }
+}
+
+/* ===== ORDER TRACKING ===== */
+function openTracking(){
+  document.getElementById('trk-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  document.getElementById('trk-result').classList.remove('show');
+  document.getElementById('trk-not-found').style.display='none';
+  document.getElementById('trk-inp').value='';
+}
+function closeTracking(){
+  document.getElementById('trk-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function trackOrder(){
+  const query=document.getElementById('trk-inp').value.trim().toUpperCase();
+  if(!query){ showToast('Please enter an Order ID or AWB number'); return; }
+
+  document.getElementById('trk-result').classList.remove('show');
+  document.getElementById('trk-not-found').style.display='none';
+
+  const orders=getOrders();
+  const order=orders.find(o=>
+    o.id.toUpperCase()===query ||
+    (o.trackingId && o.trackingId.toUpperCase()===query)
+  );
+
+  if(!order){
+    document.getElementById('trk-not-found').style.display='block';
+    return;
+  }
+
+  // Populate
+  document.getElementById('trk-oid').textContent=order.id;
+  document.getElementById('trk-date').textContent='Ordered: '+new Date(order.date).toLocaleDateString('en-IN',{day:'numeric',month:'long',year:'numeric'});
+  document.getElementById('trk-status').textContent=order.status;
+  document.getElementById('trk-amt').textContent='₹'+order.total;
+  document.getElementById('trk-addr').innerHTML=
+    `${order.address.fullName}<br>${order.address.street}, ${order.address.city}<br>${order.address.state} – ${order.address.zip}`;
+
+  const awbEl=document.getElementById('trk-awb-val');
+  const srLink=document.getElementById('trk-sr-link-wrap');
+  if(order.trackingId){
+    awbEl.textContent=order.trackingId;
+    document.getElementById('trk-sr-link').href=`https://shiprocket.co/tracking/${order.trackingId}`;
+    srLink.style.display='block';
+  } else {
+    awbEl.textContent='Will be updated after dispatch (within 24 hrs)';
+    srLink.style.display='none';
+  }
+
+  // Stepper
+  const statusMap={Processing:1,'Out for Pickup':1,Shipped:2,'In Transit':2,'Out for Delivery':3,Delivered:3};
+  const level=statusMap[order.status]||1;
+  [1,2,3,4].forEach(s=>{
+    const stp=document.getElementById(`trk-stp-${s}`);
+    stp.classList.remove('done','active');
+    if(s<=level) stp.classList.add('done');
+    if(s===level+1) stp.classList.add('active');
+  });
+  [1,2,3].forEach(s=>{
+    const ln=document.getElementById(`trk-line-${s}`);
+    ln.classList.toggle('done',s<=level);
+  });
+
+  document.getElementById('trk-result').classList.add('show');
+}
+
+/* ===== DAILY COUNTDOWN ===== */
+function initDailyCountdown(){
+  function cd(){
+    const now=new Date(),end=new Date();
+    end.setHours(23,59,59,0);
+    const d=end-now;
+    document.getElementById('cdH').textContent=String(Math.floor(d/3600000)).padStart(2,'0');
+    document.getElementById('cdM').textContent=String(Math.floor((d%3600000)/60000)).padStart(2,'0');
+    document.getElementById('cdS').textContent=String(Math.floor((d%60000)/1000)).padStart(2,'0');
+  }
+  setInterval(cd,1000); cd();
+}
+
+/* ===== HERO SLIDER ===== */
+let sliderCur=0, sliderTmr;
+const slides=()=>document.querySelectorAll('.slide');
+const dots=()=>document.querySelectorAll('.dot');
+
+function initSlider(){
+  sliderTmr=setInterval(()=>goSlide(sliderCur+1),5500);
+}
+
+function goSlide(n){
+  const s=slides(),d=dots();
+  s[sliderCur].classList.remove('active');
+  d[sliderCur].classList.remove('active');
+  sliderCur=(n+s.length)%s.length;
+  s[sliderCur].classList.add('active');
+  d[sliderCur].classList.add('active');
+  clearInterval(sliderTmr);
+  sliderTmr=setInterval(()=>goSlide(sliderCur+1),5500);
+}
+
+/* ===== PRODUCT FILTERS ===== */
+function initFilters(){
+  document.querySelectorAll('.ft').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      document.querySelectorAll('.ft').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const f=btn.dataset.f;
+      document.querySelectorAll('.pc').forEach(c=>{
+        c.style.display=(f==='all'||c.dataset.cat===f)?'':'none';
+      });
+    });
+  });
+}
+
+/* ===== SCROLL REVEAL ===== */
+let revObs;
+function initReveal(){
+  revObs=new IntersectionObserver(es=>es.forEach(e=>{
+    if(e.isIntersecting) e.target.classList.add('vis');
+  }),{threshold:0, rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.rev').forEach(el=>revObs.observe(el));
+}
+
+/* ===== TOAST ===== */
+function showToast(msg){
+  const t=document.getElementById('toast');
+  t.textContent=msg;
+  t.classList.add('show');
+  clearTimeout(t._tmr);
+  t._tmr=setTimeout(()=>t.classList.remove('show'),3000);
+}
+
+/* ===== HELPERS ===== */
+function jumpTo(id){
+  const el=document.getElementById(id);
+  if(!el){ console.warn('[GP] jumpTo: element not found:',id); return; }
+  // Slight delay to ensure layout is settled
+  setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'start'}), 50);
+}
+function scrollToTop(){ window.scrollTo({top:0,behavior:'smooth'}); }
+function closeMobNav(){ document.getElementById('mobnav').classList.remove('open'); }
+
+/* ===== BOOT ===== */
+// Wait for full DOM + resources before running
+if(document.readyState==='loading'){
+  document.addEventListener('DOMContentLoaded',()=>{ loadCart(); checkLaunchGate(); });
+} else {
+  loadCart();
+  checkLaunchGate();
+}
+
+// If user directly navigates to main site, ensure products get data-cat
+// (products are rendered dynamically so filter data-cat is set in renderProducts)
+</script>
+
+</body>
+</html>
