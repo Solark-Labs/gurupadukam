@@ -28,14 +28,16 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: frontend   # change/remove if package.json is at root
 
       - name: Build Vite project
         run: npm run build
+        working-directory: frontend   # change/remove if package.json is at root
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: frontend/dist         # adjust if dist is elsewhere
 
   deploy:
     environment:
